@@ -1,10 +1,8 @@
 1. Metadatenerfassung
 
 Die Erfassung der Metadaten findet für die Edierenden über eine Online-Eingabemaske in UrMEL statt. Für diesen Zweck wurden die bereits verfügbaren und erprobten Eingabefelder aus Collections@UrMEL angepasst und erweitert. Die Metadaten werden sowohl im UrMEL-eigenen XML-Metadatenformat (MCRMeta) als auch in XML/TEI-P5 abgebildet. Eine entsprechende XML-Vorlage wird auf Nachfrage gern zur Verfügung gestellt.
-Fett markierte Metadaten sind verpflichtende Angaben, kursiv markierte Metadaten sind empfohlene Angaben
 Die Eingabesprache für die Textfelder und Auswahllisten ist Deutsch
 Einzelne Freitextfelder erhalten zusätzlich die Möglichkeit, die Originalschrift in einem zusätzlichen Feld einzugeben, z.B. auf Arabisch. Entsprechend muss über ein Auswahlfeld die Rechts-nach-Links-Schreibrichtung aktiviert werden können.
-Wichtig: Das Datenmodell muss möglichst offen und erweiterbar gehalten werden angesichts zukünftiger Projekte mit zusätzlichen Anforderungen an das Modell. Inwiefern neue Anforderungen auch in Form von geschlossenen standardisierten Auswahllisten umgesetzt sollen, hängt davon ab, ob eine entsprechende Portalfunktion (z.B. Filter aller Dokumente nach speziellem Kriterium) umgesetzt werden soll oder eine Interoperabilität der Daten mit anderen Webressourcen vorgesehen ist. Andernfalls können Freitextfeld ergänzt werden. Das Metadatenmodell sollte folglich einerseits nicht zu spezifisch, andererseits nicht zu unspezifisch und allgemein gehalten sein. Oberkategorien sollten jederzeit weiter differenzierbar sein. Entscheidend für Prozessierung im Portal ist letztlich, dass die Eingaben eindeutig bezeichnet und referenzierbar strukturiert sind.
 Die einzelnen Eingabefelder erhalten im Portal ausführliche Erklärungen und Nutzungsbeispiele.
 
  
