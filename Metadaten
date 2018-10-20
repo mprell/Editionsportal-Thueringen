@@ -1,0 +1,168 @@
+1. Metadatenerfassung
+
+Die Erfassung der Metadaten findet für die Edierenden über eine Online-Eingabemaske in UrMEL statt. Für diesen Zweck wurden die bereits verfügbaren und erprobten Eingabefelder aus Collections@UrMEL angepasst und erweitert. Die Metadaten werden sowohl im UrMEL-eigenen XML-Metadatenformat (MCRMeta) als auch in XML/TEI-P5 abgebildet. Eine entsprechende XML-Vorlage wird auf Nachfrage gern zur Verfügung gestellt.
+Fett markierte Metadaten sind verpflichtende Angaben, kursiv markierte Metadaten sind empfohlene Angaben
+Die Eingabesprache für die Textfelder und Auswahllisten ist Deutsch
+Einzelne Freitextfelder erhalten zusätzlich die Möglichkeit, die Originalschrift in einem zusätzlichen Feld einzugeben, z.B. auf Arabisch. Entsprechend muss über ein Auswahlfeld die Rechts-nach-Links-Schreibrichtung aktiviert werden können.
+Wichtig: Das Datenmodell muss möglichst offen und erweiterbar gehalten werden angesichts zukünftiger Projekte mit zusätzlichen Anforderungen an das Modell. Inwiefern neue Anforderungen auch in Form von geschlossenen standardisierten Auswahllisten umgesetzt sollen, hängt davon ab, ob eine entsprechende Portalfunktion (z.B. Filter aller Dokumente nach speziellem Kriterium) umgesetzt werden soll oder eine Interoperabilität der Daten mit anderen Webressourcen vorgesehen ist. Andernfalls können Freitextfeld ergänzt werden. Das Metadatenmodell sollte folglich einerseits nicht zu spezifisch, andererseits nicht zu unspezifisch und allgemein gehalten sein. Oberkategorien sollten jederzeit weiter differenzierbar sein. Entscheidend für Prozessierung im Portal ist letztlich, dass die Eingaben eindeutig bezeichnet und referenzierbar strukturiert sind.
+Die einzelnen Eingabefelder erhalten im Portal ausführliche Erklärungen und Nutzungsbeispiele.
+
+ 
+Titel:
+01|	Hauptsachtitel der Quelle
+--> Freitextfeld
+02|	Untertitel der Quelle
+  --> Freitextfeld
+03|	Bandnummer und ggf. Titel der Quelle
+--> Freitextfeld
+
+Person(en) und Institution(en):
+04|	Person(en) und Institution(en)
+--> wiederholbar
+--> Auswahlfeld Rollenbezeichnung aus geschlossener Liste:
+z.B. Autor/in / Verfasser/in (Quelle), Herausgeber/in (Textausgabe), Herausgeber/in (Quelle) sowie weitere an Quelle und Textausgabe beteiligte Personen und Institutionen z.B. Projektleiter/in, Bearbeiter(in/Editor/in (Textausgabe), Bearbeiter/in (Quelle), Empfänger/in, Projektpartner/in, Förder/in, Besitzer/in / Bewahrer/in, Übersetzer/in (Quelle), Übersetzer/in (Textausgabe), Nachschreiber/in, Digitalisierer/in, Projektpartner/in  (bisherige UrMEL-Rollenliste muss dafür teilweise erweitert werden; muss offen sein für spätere Erweiterungen)
+--> Auswahlfeld für Angabe einer Person aus UrMEL-Datenbank (bisher nicht erfasste Personen müssen zuvor angelegt werden)
+--> Feld für GND-ID einer Person
+--> Auswahlfeld für Angabe einer Institution aus UrMEL-Datenbank (bisher nicht erfasste Institutionen müssen zuvor angelegt werden)
+--> Feld für GND-ID einer Institution
+
+Angaben zur Textausgabe (d.i. die Edition, sprich die in UrMEL verfügbare Transkription, Images, Metadaten/Katalogisat etc.):
+05|	Art der vorliegenden Textausgabe
+--> geschlossene Auswahlliste: Historisch-Kritische Ausgabe | Kritische Ausgabe | Studienausgabe | Leseausgabe | Regestausgabe | Faksimileausgabe |  Übersetzung (Feld wiederholbar, da in digitalen Editionen mehrere Varianten möglich)
+06|	Vollständigkeit der Digitalisate 
+geschlossene Liste (Auswahlmöglichkeiten: vollständig digitalisierte Textausgabe | unvollständig digitalisierte Textausgabe)
+07|	Vollständigkeit der Transkriptionen 
+geschlossene Liste (Auswahlmöglichkeiten: vollständig transkribierte Textausgabe | unvollständig transkribierte Textausgabe)
+08|	Herausgebendes/Zugehöriges Projekt (über Eingabefeld „Projekte(e)“)
+--> geschlossene Liste für Projektname mit standardisierter Bezeichnung; Projektname muss in UrMEL zuvor angelegt werden
+09|	Publikationsort der Textausgabe (wiederholbar)
+--> Freitextfeld und Feld für GND-Nummer
+10|	Publikationsdatum der Textausgabe
+--> Feld für Angabe nach ISO 8601
+11|	Lizenz der Textausgabe
+--> geschlossene Auswahlliste; Auswahlmöglichkeit entsprechend DBT (Auswahl: Alle Rechte vorbehalten, CC BY 4.0, CC BY-NC 4.0, CC BY-NC-ND 4.0, CC BY-NC-SA 4.0, CC BY-ND 4.0, CC BY-SA 4.0, ODC, ODC-ODbL, Open-Access im Zuge einer Allianz- bzw. Nationallizenz, PDDL)
+12|	Bestandsangabe
+--> meint die Verortung der Textausgabe innerhalb der Struktur von Collections und anderen UrMEL-Repositorien (entspricht Struktur im Klassifikationseditor und wird daher aus Auswahlliste ausgewählt)
+13|	Anmerkungen/Zusatzinformationen zur Textausgabe
+--> Freitextfeld
+14|	Bearbeitungsstatus
+--> geschlossene Liste (Auswahl: In Bearbeitung | Bearbeitung abgeschlossen)
+---> Freitextfeld (bspw. zur Angabe projektinterner Bearbeitungsstufen)
+15|	Link auf eine mit dem Dokument zu verbindende Ressource (wiederholbar)
+--> Feld für URL und Freitextfeld für weitere Angaben
+16|	Weitere - neben der erfassten Leithandschrift - in der Textausgabe edierte Textzeugen 
+--> Freitextfeld für Angabe des Textzeugen
+--> Feld für (externe) URI des Textzeugen
+17|	Angaben zu den Transkriptionsprinzipien
+Normalisierungen
+--> geschlossene Auswahlliste: markiert | stillschweigend (beide anwählbar, z.B. bei Vorliegen mehrerer Transkriptionen); Freitextfeld für nähere Beschreibung 
+  	Korrekturen
+--> geschlossene Auswahlliste: markiert | stillschweigend (beide anwählbar, z.B. bei Vorliegen mehrerer Transkriptionen); Freitextfeld für nähere Beschreibung
+Interpunktion
+--> geschlossene Auswahlliste: alle beibehalten | einige beibehalten | keine beibehalten (beide anwählbar, z.B. bei Vorliegen mehrerer Transkriptionen); Freitextfeld für nähere Beschreibung
+Silbentrennung (am Zeilenende)
+--> geschlossene Auswahlliste: alle beibehalten | einige beibehalten | nur harte beibehalten | alle entfernt (beide anwählbar, z.B. bei Vorliegen mehrerer Transkriptionen); Freitextfeld für nähere Beschreibung
+weitere Angaben zu den Transkriptionsprinzipien
+--> Freitextfeld
+18|	Beschreibung der Änderungen an der Textausgabe
+--> Freitextfeld
+
+Angaben zur Handschrift (d.i. die zugrundeliegende Quelle der Textausgabe):
+19|	Zitiertitel der Textausgabe
+--> Freitextfeld
+20|	Umfang der Quelle in Seiten
+--> numerisches Datenfeld
+21|	Entstehungsort der Quelle
+--> Freitextfeld für Name
+--> Feld für GND-Nummer
+--> Freitextfeld für Anmerkung, bspw. Begründung wenn Ort ermittelt wurde
+22|	Entstehungsdatum der Quelle
+--> Feld für Angabe nach ISO 8601 
+--> Feld für Auswahl julianischer oder gregorianischer Kalender
+--> Freitextfeld für Anmerkung, bspw. Begründung wenn Datum ermittelt wurde
+--> Freitextfeld für Datierung nach alternativem Kalender (z.B. julianischer, islamischer, Revolutionskalender, Heiligentage etc.)
+23|	Titel der übergeordneten Reihe/Serie
+24|	Untertitel der übergeordneten Reihe/Serie
+25|	Band einer Reihe/Serie
+26|	Angabe, welche Seiten das Dokument umfasst
+27|	Anmerkungen/Zusatzinformationen zur Quelle
+--> Freitextfeld für Kommentar zur zugrundeliegenden Quelle; auch Bereich für weitere Anmerkungen, die woanders nicht zuordenbar sind
+28|	Entstehungsstufe
+--> geschlossene Auswahlliste (Entwurf, Abschrift, Ausfertigung)
+29|	Standort der Quelle (Institution, Person)
+--> GND-Feld
+--> Freitextfeld
+30|	Signatur der Quelle
+--> Freitextfeld
+31|	Inhaltsangabe
+--> Freitextfeld
+32|	erwähnte Person
+--> GND-Feld
+33|	erwähnter Ort
+--> GND-Feld
+34|	erwähntes (historisches) Ereignis
+--> GND-Feld
+35|	Incipit (meint Incipit nach Vorlage, keine Übersetzung o.ä.)
+--> Freitextfeld
+36|	Beschreibstoff
+--> geschlossene Auswahlliste (Papier, Pergament, Stoff)
+--> Freitextfeld für spezifizierende Angaben, z.B. bei spezieller Papiersorte 
+37|	Beschreibung etwaiger Wasserzeichen
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld und wiederholbares Feld für Link zu externer Ressource bspw. Piccard-Datenbank oder WZIS
+38|	Beschreibung etwaiger Stempel
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+39|	Größenangaben 
+--> Zahlenfeld Höhe in Millimeter
+--> Zahlenfeld Breite in Millimeter
+--> Freitextfeld für Formatangabe
+40|	Beschreibung der Foliierung, z.B. Urheber, Platzierung, Farbe, Schreibmaterial
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+41|	Beschreibung der Anordnung der Blätter
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+42|	Erhaltungszustand der Quelle und mögliche erfolgte Restaurierungen und konservatorische Maßnahmen
+--> geschlossene Auswahlliste (kein Schaden | leichter Schaden | mittlerer Schaden | schwerer Schaden)
+--> Freitextfeld für Beschreibung und weitere Anmerkungen
+43|	Ausführungen zum Layout der Quelle (z.B. Anzahl der Zeilen und Spalten pro Seite, Anordnung von Text und Freiraum, Größe der Seitenränder)
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+44|	vorherrschende Schriftsysteme/-arten
+--> geschlossene Auswahlliste (Auswahl gemäß ISO 15924; z.B. 215 Latn für Latein, 217 Latf für latin (Fraktur Variant) oder 160 Arab für Arabisch etc.) bzw. Freitextfeld mit Eingabe nach ISO 15924 als einzig zulässig; wiederholbar
+45|	Beschreibung des Schriftbildes sowie weiterer auftretender Schriftsysteme/-arten
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+46|	Beschreibung dekorativer/grafischer Elemente der Quelle
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+--> Feld für IconClass-ID
+47|	Beschreibung signifikanter Hinzufügungen bspw. von Randbemerkungen oder anderer Anmerkungen
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+48|	Beschreibung der Bindung der Quelle
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+49|	Beschreibung des Siegels (z.B. Farbe, Material, Erhaltung, Text/Abbildungen, ausstellende Person/Institution)
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+50|	Beschreibung begleitenden Materials zur Quelle (z.B. Beilagen, Briefumschlag, Zeichnungen, Risse, Karten, Diagramme, Statistiken, eingebundenes nichtzeitgenössisches Material etc.)
+--> Zuordnung zu Kategorie „weitere Elemente“; Freitextfeld
+51|	Angaben zur Quellengeschichte
+--> Freitextfeld
+52|	Literatur zur Quelle oder Veröffentlichungen/ Abdrucke/ Abbildungen/ Alteditionen der Quelle; auch Angabe von Quellenrepertoires oder archivalischen Findmitteln, in denen die Quelle verzeichnet ist
+--> Freitextfeld, wiederholbar
+---> Feld für PPN-Angabe zur OPAC-Verlinkung, wiederholbar
+53|	Sprache(n) der Quelle
+--> geschlossene Auswahlliste mit Angaben nach ISO 639-3 (z.B. deu für deutsch) bzw. Freitextfeld mit Eingabe nach ISO 639-3 als einzig zulässig; wiederholbar
+54|	Textgattung/-sorte lt. ThULB-Klassifikation
+--> geschlossene Auswahlliste
+55|	Sachgebiet(e) lt. DDC-Klassifikation
+--> geschlossene Auswahlliste
+56|	Sachschlagwörter lt. GND-Nummer für Sachbegriffe
+--> geschlossene Auswahlliste, GND-Nummer für Sachbegriffe 
+57|	Thüringenbezug der Quelle
+--> geschlossene Liste (Auswahl: „entstehungs-/sammlungsbezogen, institutionell oder administrativ-editorisch“ | „inhaltlich/sachlich“) --> beide Optionen sind auswählbar
+58|	Klassifikation nach Notifikation der Thüringen-Bibliographie
+--> geschlossene Auswahlliste (siehe THULB-OPAC: Suchbegriff „mak tev“ für Übersicht verfügbarer Notifikationen)
+59|	Historische Systematik der Quelle (Jahrhundertangabe)
+--> geschlossene Auswahlliste mit Jahrhundertangabe von 9.-20. Jh.; wiederholbar
+60|	Thema innerhalb projekteigener Themenliste/Thesaurus
+--> Freitextfeld mit Kommata als einzig zulässiges Trennzeichen
+61|	Vorhergehendes Dokument („Antwortet auf“)
+--> Auswahlbutton für zu verknüpfendes MyCoRe-Objekt
+--> freies Textfeld für Anmerkungen zum Dokument
+62|	Nachfolgendes Dokument („Beantwortet durch“)
+--> Auswahlbutton für zu verknüpfendes MyCoRe-Objekt
+--> freies Textfeld für Anmerkungen zum Dokument
