@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<?xml-model href="basisformat_ms.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title>
                 <author>
-                    <persName ref="http://d-nb.info/gnd/139081127 http://www.viaf.net/viaf/95671766 https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623 https://www.wikidata.org/wiki/Q323050">
+                    <persName xml:id="EB">
+                        <ref type="gnd">139081127</ref>
+                        <ref type="viaf">95671766</ref>
+                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
+                        <ref type="wikidata">Q323050</ref>
                         <surname>Reuß-Ebersdorf</surname>
                         <forename>Erdmuthe Benigna</forename>
                         <nameLink>von</nameLink>
@@ -15,19 +18,22 @@
                     </persName>
                 </author>
                 <editor>
-                    <persName ref="http://d-nb.info/gnd/1133022898">
+                    <persName>
+                        <ref type="gnd">1133022898</ref>
                         <surname>Prell</surname>
                         <forename>Martin</forename>
                     </persName>
                 </editor>
                 <editor>
-                    <persName ref="http://d-nb.info/gnd/130511005">
+                    <persName>
+                        <ref type="gnd">130511005</ref>
                         <surname>Schmidt-Funke</surname>
                         <forename>Julia A.</forename>
                     </persName>
                 </editor>
                 <respStmt>
-                    <orgName ref="http://d-nb.info/gnd/5053491-9" xml:id="thulb">
+                    <orgName xml:id="thulb">
+                        <ref type="gnd">5053491-9</ref>
                         Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
                     </orgName> 
                     <resp>
@@ -56,7 +62,8 @@
                     </resp>
                 </respStmt>
                 <respStmt>
-                    <persName xml:id="MP" ref="http://d-nb.info/gnd/1133022898">
+                    <persName xml:id="MP">
+                        <ref type="gnd">1133022898</ref>
                         <surname>Prell</surname>
                         <forename>Martin</forename>
                     </persName>
@@ -85,16 +92,19 @@
             </extent>
             <publicationStmt>
                 <publisher>
-                    <orgName role="hostingInstitution" ref="http://d-nb.info/gnd/5053491-9">
+                    <orgName role="hostingInstitution">
+                        <ref type="gnd">5053491-9</ref>
                         Thüringer Universitäts- und Landesbibliothek Jena (ThULB)</orgName>
                     <orgName role="project">Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)</orgName><!-- Projektname muss in UrMEL zuvor angelegt worden sein -->
                 </publisher>
-                <pubPlace ref="http://d-nb.info/gnd/4028557-1 http://www.geonames.org/2895044">
+                <pubPlace>
+                    <ref type="gnd">4028557-1</ref>
+                    <ref type="geonames">2895044</ref>
                     Jena
                 </pubPlace>
                 <date type="publication" when-iso="2017-02-28">28. Februar 2017</date>
                 <availability>
-                    <licence> <!-- @target mit URL auf Lizenzetext möglich?-->
+                    <licence target="https://creativecommons.org/licenses/by-sa/4.0/">
                         <p>CC BY 4.0(Namensnennung 4.0)</p>
                     </licence>
                 </availability>
@@ -111,9 +121,9 @@
             </seriesStmt>
             <notesStmt>
                 <note type="remarkDocument">[Zusatzinformationen zur Textausgabe]</note>
-                <note type="remarkDocument" subtype="editingStatus">In Bearbeitung</note>
-                <note type="remarkDocument" subtype="editingStatusSpecific">Stufe 4</note>
-                <note type="remarkDocument" subtype="linkDocument">
+                <note type="editingStatus">In Bearbeitung</note>
+                <note type="editingStatusSpecific">Stufe 4</note>
+                <note type="linkDocument">
                     <ref>http://erdmuthe.thulb.uni-jena.de</ref>
                     <p>Zur Edition:</p>
                 </note>
@@ -125,7 +135,11 @@
                     <titleStmt>
                         <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title><!-- aus fileDesc/titleStmt/title[@type="main"] bezogen -->
                         <author>
-                            <persName ref="http://d-nb.info/gnd/139081127 http://www.viaf.net/viaf/95671766 https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623 https://www.wikidata.org/wiki/Q323050">
+                            <persName>
+                                <ref type="gnd">139081127</ref>
+                                <ref type="viaf">95671766</ref>
+                                <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
+                                <ref type="wikidata">Q323050</ref>
                                 <surname>Reuß-Ebersdorf</surname>
                                 <forename>Erdmuthe Benigna</forename>
                                 <nameLink>von</nameLink>
@@ -139,18 +153,20 @@
                     </extent>
                     <publicationStmt>
                         <publisher/>
-                        <pubPlace ref="http://d-nb.info/gnd/4823248-8 http://www.geonames.org/2933921">
+                        <pubPlace>
+                            <ref type="gnd">4823248-8</ref>
+                            <ref type="geonames">2933921</ref>
                             Ebersdorf (Thüringen)
                             <note resp="#MP">Der Ausstellungsort ist in der Quelle zwar unter einer anderen Schreibweise angegeben, er entspricht aber mit hoher Wahrscheinlichkeit dem identifizierten Ort. Von diesem aus wurde auch die Mehrzahl der übrigen Briefe der Gräfin verschickt.</note>
                         </pubPlace>
-                        <date type="publication" calendar="gregorian" when-iso="1712-11-17" cert="high">17. Dezember 1712
-                            <note type="remarkGregorianDate" resp="#MP">Der Brief wurde über einen längeren Zeitraum hinweg geschrieben. Neben dem 17.11.1712 ist im Brief auch das Datum Dezember 1712 zu finden</note>
+                        <date type="creation" calendar="gregorian" when-iso="1712-11-17" cert="high">17. Dezember 1712
+                            <note type="remarkDate" resp="#MP">Der Brief wurde über einen längeren Zeitraum hinweg geschrieben. Neben dem 17.11.1712 ist im Brief auch das Datum Dezember 1712 zu finden</note>
                             <note type="alternativeDating" resp="#MP">Julianischer Kalender: 6. November 1712</note>
                         </date>
                     </publicationStmt>
                     <seriesStmt>
-                        <title level="u" type="main">Correspondenz in der Ebersdorf. Vormundschafts-Angel. (1712-1722)</title>
-                        <biblScope unit="pages">56r-60v</biblScope>
+                        <title type="main">Correspondenz in der Ebersdorf. Vormundschafts-Angel. (1712-1722)</title>
+                        <biblScope unit="page">56r-60v</biblScope>
                     </seriesStmt>
                     <notesStmt>
                         <note type="remarkSource">Es existieren keine weiteren Abschriften der Quelle. Der Brief ist über einen längeren Zeitraum hinweg verfasst worden. Als einer der wenigen Briefe der Edition hat er eine vollständiges Datierung durch die Schreiberin erhalten. Der Brief wird zwar im Thüringischen Staatsarchiv Greiz aufbewahrt (Depositum), befindet sich aber in Besitz des Fürsten Reuß Heinrich XIV.</note>
@@ -173,7 +189,8 @@
                             <p>Der Brief behandelt folgende Themenkomplexe: Differenzen mit Lobenstein um die Teilung der Herrschaft Hirschberg, Differenzen mit Hirschbergern und militärisches Eingreifen, Lobensteiner Seniorat und Direktorium, Nachfolge Superintendent, Geschlechtstag in Gera, Reform-/Autonomieabsichten Erdmuthes (eigenes Votum und Inspektionsamt), Mitvormundschaft Carl Ottos von Solms-Laubach-Utphe, Entbindung Marie Eleonore Emilies Reuß-Köstritz</p>
                             <listPerson type="mentioned">
                                 <person>
-                                    <persName ref="https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00015648">
+                                    <persName>
+                                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00015648</ref>
                                         <surname>Reuß-Köstritz, geb. Promnitz-Dittersbach</surname>
                                         <forename>Marie Eleonore Emilie</forename>
                                         <nameLink>von</nameLink>
@@ -181,7 +198,8 @@
                                     </persName>
                                 </person>
                                 <person>
-                                    <persName ref="http://d-nb.info/gnd/117462284">
+                                    <persName>
+                                        <ref type="gnd">117462284</ref>
                                         <surname>Solms-Laubach-Utphe</surname>
                                         <forename>Carl Otto</forename>
                                         <nameLink>zu</nameLink>
@@ -191,12 +209,14 @@
                             </listPerson>
                             <listPlace type="mentioned">
                                 <place>
-                                    <placeName ref="http://d-nb.info/gnd/4020295-1">
+                                    <placeName>
+                                        <ref type="gnd">4020295-1</ref>
                                         Gera
                                     </placeName>
                                 </place>
                                 <place>
-                                    <placeName ref="http://d-nb.info/gnd/4565852-3">
+                                    <placeName>
+                                        <ref type="gnd">4565852-3</ref>
                                         Hirschberg
                                     </placeName>
                                 </place>
@@ -216,6 +236,7 @@
                         </summary>
                         <msItem>
                             <incipit>ich binn ietzt hir in gera all wo ich Erl schreiben er halten</incipit>
+                            <explicit>es ist diß mahl nicht zu ändern</explicit>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -224,7 +245,7 @@
                                 <support>
                                     <material>Papier</material>
                                     <watermark>Ochsenkopf - Mit Augen - Darüber einkonturige Stange - Darüber Blume - Ohne Beizeichen
-                                        <ref>https://www.wasserzeichen-online.de/?ref=DE4620-PO-65706</ref>
+                                        <ref target="URL">https://www.wasserzeichen-online.de/?ref=DE4620-PO-65706</ref>
                                     </watermark>
                                     <stamp>Keine Stempel</stamp>
                                 </support>
@@ -259,7 +280,7 @@
                             <handNote xml:id="heinrich_xxiv_hand" scope="minor" medium="red_pencil" scribe="addressee">Hand des Adressaten Heinrich XXIV., roter Buntstift, in lateinischer Schrift</handNote>
                         </handDesc>
                         <scriptDesc>
-                            <scriptNote scope="major" script="Latf">überwiegend Kurrentschrift</scriptNote>
+                            <scriptNote scope="major" script="Latf" scriptRef="http://www.unicode.org/iso15924/">überwiegend Kurrentschrift</scriptNote>
                             <scriptNote>
                                 <p>Die Hauptschrift ist sehr weitgezogen ausgeführt. Es treten auch Antiquabuchstaben auf, allerdings häufig vermischt mit kurrenten Buchstaben.</p>
                             </scriptNote>
@@ -298,8 +319,7 @@
                     </additional>
                 </msDesc>
                 <listWit>
-                    <witness xml:id="PK16_56A" corresp="#referenceManuscript">
-                    </witness>
+                    <witness xml:id="PK16_56A" corresp="#referenceManuscript"/>
                     <witness xml:id="PK16_56B" rend="concept">
                         Der Entwurf des ausgefertigten Briefes befindet sich im Hausarchiv Ebersdorf ...
                         <ref target="http://www.URLausgedacht1.de"/>
@@ -320,21 +340,18 @@
                     <p>Korrekturen wurden keine vorgenommen.</p>
                 </correction>
                 <punctuation marks="some">
-                    <p>Der überwiegende Teil der Interpunktion folgt der Vorlage. Lediglich an einigen Stellen wurden Satzpunkte eingefügt und der Nachfolgende Satz mit einem Großbuchstaben begonnen.</p>
+                    <p>Die Interpunktion wurde überwiegend übernommen</p>
                 </punctuation>
-                <hyphenation eol="all">
-                    <p>Die Silbentrennung wurde entsprechend der Vorlage wiedergegeben</p>
-                </hyphenation>
-                <p>Die Groß- und Kleinschreibung wurde (mit Ausnahme der Satzanfänge) vorlagengetreu beibehalten.</p>
+                <p>Die Transkription und Auszeichnungstiefe erfolgte nach den unter <ref target="xxx">[URL zum TEI-DOkument mit den Transkriptionsrichtlinien, bspw. denen des Editionsportals Thüringen bzw. projekteigenen]</ref> formulierten Richtlinien.</p>
             </editorialDecl>
             <classDecl>
-                <taxonomy xml:id="ThULBNTB" >
+                <taxonomy xml:id="thulbntb" >
                     <bibl>ThULB Notification of Thüringian Bibliography</bibl>
                 </taxonomy>
-                <taxonomy xml:id="ThULBCTG">
+                <taxonomy xml:id="thulbctg">
                     <bibl>ThULB Classification of Text Genre</bibl>
                 </taxonomy>
-                <taxonomy xml:id="ThULBCHS">
+                <taxonomy xml:id="thulbchs">
                     <bibl>ThULB Classification of Historical Systematic</bibl>
                 </taxonomy>
                 <taxonomy xml:id="ddc">
@@ -350,9 +367,9 @@
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="deu">Deutsch</language>
-                <language ident="lat">Latein</language>
-                <language ident="fra">Französisch</language>
+                <language ident="deu" source="iso639-3">Deutsch</language>
+                <language ident="lat" source="iso639-3">Latein</language>
+                <language ident="fra" source="iso639-3">Französisch</language>
             </langUsage>
             <textClass>
                 <classCode scheme="#ddc" >
@@ -360,11 +377,20 @@
                     <term>274 Geschichte des Christentums in Europa</term>
                 </classCode>
                 <classCode scheme="#gnd">
-                    <term ref="http://d-nb.info/gnd/4114558-6">Meinungsverschiedenheit</term>
-                    <term ref="http://d-nb.info/gnd/4142472-4">Angriff</term>
-                    <term ref="http://d-nb.info/gnd/4115716-3">Reform</term>
-                    <term ref="http://d-nb.info/gnd/4019589-2">Geburt</term>
-                    <term ref="http://d-nb.info/gnd/4046049-6">Pietismus</term>
+                    <term ref="4114558-6">
+                        Meinungsverschiedenheit
+                    </term>
+                    <term ref="4142472-4">
+                        Angriff
+                    </term>
+                    <term ref="4115716-3">
+                        Reform</term>
+                    <term ref="4019589-2">
+                        Geburt
+                    </term>
+                    <term ref="4046049-6">
+                        Pietismus
+                    </term>
                 </classCode>
                 <classCode scheme="#ThULBCTG">
                     <term>Brief</term>
@@ -391,27 +417,35 @@
             </textClass>
             <correspDesc>
                 <correspAction type="sent">
-                    <persName ref="http://d-nb.info/gnd/139081127 http://www.viaf.net/viaf/95671766 https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623 https://www.wikidata.org/wiki/Q323050">
+                    <persName>
+                        <ref type="gnd">139081127</ref>
+                        <ref type="viaf">95671766</ref>
+                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
+                        <ref type="wikidata">Q323050</ref>
                         <surname>Reuß-Ebersdorf</surname>
                         <forename>Erdmuthe Benigna</forename>
                         <nameLink>von</nameLink>
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
                     </persName>
-                    <placeName ref="http://d-nb.info/gnd/4823248-8 http://www.geonames.org/2933921">
+                    <placeName>
+                        <ref type="gnd">4823248-8</ref>
+                        <ref type="geonames">2933921</ref>
                         Ebersdorf
                     </placeName>
                     <date calendar="gregorian" when-iso="1712-11-17" cert="high">17. Dezember 1712
                     </date>
                 </correspAction>
                 <correspAction type="received">
-                    <persName ref="http://d-nb.info/gnd/130132365 https://viaf.org/viaf/443099">
+                    <persName>
+                        <ref type="gnd">130132365</ref>
                         <surname>Reuß-Schleiz zu Köstritz</surname>
                         <forename>Heinrich XXIV.</forename>
                         <nameLink>von</nameLink>
                         <roleName>Graf</roleName>
                     </persName>
-                    <placeName ref="http://d-nb.info/gnd/4320217-2" cert="high">
+                    <placeName cert="high">
+                        <ref type="gnd">4320217-2</ref>
                         Köstritz
                     </placeName>
                     <date/>
@@ -430,22 +464,17 @@
             </correspDesc>
         </profileDesc>
         <revisionDesc>
-            <change when="2016-06-15T14:13:18.893Z" who="#MP">
+            <change when-iso="2016-06-15T14:13:18.893Z" who="#MP">
                 <p>Fehlerkorrektur</p>
             </change>
-            <change when="2016-06-06T12:24:21.056Z" who="#MP">
+            <change when-iso="2016-06-06T12:24:21.056Z" who="#MP">
                 <p>geändert</p>
             </change>
         </revisionDesc>
     </teiHeader>
-    <text type="transcription">
+    <text>
         <body>
-            <p>[Transkription hier]</p>
-        </body>
-    </text>
-    <text type="translation.de">
-        <body>
-            <p>[Lesefassung/ Übersetzung ins Deutsche hier]</p>
+            <p/>
         </body>
     </text>
 </TEI>
