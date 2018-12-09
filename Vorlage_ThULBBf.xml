@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Stand: 09.07.2018 -->
-<!--<?xml-model href="basisformat_ms.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>-->
+<!-- Stand: 07.12.2018 -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -9,20 +8,14 @@
                 <title type="sub">[Untertitel der Quelle]</title> <!-- ggf. mehrfach zu verwenden -->
                 <title type="volume">[Bandnummer und ggf. -titel der Quelle]</title>
 <!-- die <title> werden zusätzlich in sourceDesc/biblFull/titleStmt erfasst! -->
-                <author role="scribe|author|sender"><!-- UrMEL ermöglicht genauere Eingrenzung des Autors (Autor, Schreiber, Absender); @role nicht DTABf-konform -->
-                    <persName xml:id="[ID für dokumentinterne Referenzierung]" ref="[vollst. URI auf externe DB (GND, VIAF, UrMEL]">
-                        <!--vollst. URI muss angegeben werden, damit Unterscheidung zwischen GND und VIAF möglich ist! -->
-                        <!-- Priorisierung: GND, VIAF, UrMEL oder andere URI durch -->
+                <author><!-- UrMEL ermöglicht genauere Eingrenzung des Urhebers (Verfasser/Autor) Wie damit umgehen? -->
+                    <persName xml:id="[ID für dokumentinterne Referenzierung]">
                         <!-- @xml:id für XML-Edierende -->
-                        <!-- falls Person namentlich nicht bekannt, muss auch Möglichkeit gegeben werden, diese mit N.N. oder k.A. anzugeben; --> 
-                        
-                        <!--
-                        Alterantive zu @ref:
-                        <ref type="urmel">[URL zu Eintrag in UrMEL-Personendatenbank]</ref>
                         <ref type="gnd">[GND-ID]</ref>
                         <ref type="viaf">[VIAF-ID]</ref>
-                        -->
-                        
+                        <ref type="urmel">[UrMEL-ID oder -URL]</ref>
+                        <ref type="wikidata">[wikidata-Q-ID]</ref>
+                        <!-- falls Person namentlich nicht bekannt, muss auch Möglichkeit gegeben werden, diese mit N.N. oder k.A. anzugeben; -->
                         <surname>[Familienname des Autors]</surname>
                         <forename>[Vorname des Autors]</forename>
                         <nameLink>[Namenszusatz, z.B. Adelsprädikat "von"]</nameLink>
@@ -34,7 +27,8 @@
                 <!-- weitere <author> möglich -->
                 <!-- <author> wird zusätzlich in sourceDesc/biblFull/titleStmt erfasst! -->
                 <editor><!-- Herausgeber der vorliegenden Transkription/Textausgabe; nicht zu verwechseln mit Herausgeber der Quelle (s.u.)! Muss daher in Rollenklassifikation in Urmel unterschieden werden bpsw. zwischen "Herausgeber (Textausgabe)" und "Herausgeber (Quelle)" -->
-                    <persName ref="[URI auf externe DB (GND, VIAF, UrMEL]">
+                    <persName>
+                        <ref type="gnd">[GND-ID]</ref>
                         <surname>[Familienname des Herausgebers der Textausgabe]</surname>
                         <forename>[Vorname des Herausgebers der Textausgabe]</forename>
                         <!-- siehe oben für weitere mögliche Unterelemente -->
@@ -42,18 +36,20 @@
                 </editor>
                 <!-- weitere <editor> möglich -->
                 <respStmt><!-- Weitere an Quelle UND Textausgabe/Edition beteiligte Personen und Organisationen; ggf. mehrfach zu verwenden -->
-                    <persName xml:id="[ID]" ref="[URI auf externe DB (GND, VIAF, UrMEL]"><!-- @xml:id für XML-Edierende die im Volltext oder unter handDesc auf Person verweisen; sollte auch in FuD und Word automatisch erfolgen durch Accounterkennung; wie ID generieren?-->
+                    <persName xml:id="[ID]"><!-- @xml:id für XML-Edierende die im Volltext oder unter handDesc auf Person verweisen; sollte auch in FuD und Word automatisch erfolgen durch Accounterkennung; wie ID generieren?-->
+                        <ref type="gnd">[GND-ID]</ref>
                         <surname>[Familienname]</surname>
                         <forename>[Vorname]</forename>
                         <!-- falls Person namentlich nicht bekannt, muss auch Möglichkeit gegeben werden, diese mit N.N. oder k.A. anzugeben -->
                         <!-- siehe oben für weitere mögliche Unterelemente -->
                     </persName>
 <!--                    bzw. falls Organisation: 
-                    <orgName ref="[URI auf externe DB (GND, VIAF, UrMEL]">
+                    <orgName>
+                    <ref type="gnd|viaf|urmel">[ID]</ref>
                         [Organisation/Institution]
                     </orgName> -->
                     <resp><!-- ist in jedem Fall anzugeben -->
-                        <note type="remarkResponsibility">[Art der Verantwortlichkeit, z.B. Projektleiter/in, Empfänger/in, Bearbeiter/in (Textausgabe), Bearbeiter/in (Quelle), Projektpartner/in, Fördernde/r, Übersetzer/in etc. (außer Autor und Editor (Textausgabe))]</note><!-- Elementinhalt muss aus geschlossener Liste stammen, der durch Auswahl der Rolle einer Person in UrMEL-Erfassungsmaske bestimmt wird; ThULB-Liste muss dafür etwas erweitert werden s. Übersicht Metadaten -->
+                        <note type="remarkResponsibility">[Art der Verantwortlichkeit, z.B. Projektleiter/in, Empfänger/in, Bearbeiter/in (Textausgabe/Edition), Bearbeiter/in (Quelle), Projektpartner/in, Fördernde/r, Übersetzer/in etc. (außer Autor und Editor (Textausgabe))]</note><!-- Elementinhalt muss aus geschlossener Liste stammen, der durch Auswahl der Rolle einer Person in UrMEL-Erfassungsmaske bestimmt wird; ThULB-Liste muss dafür etwas erweitert werden s. Übersicht Metadaten -->
                     </resp>
                     <!-- <resp> ist nur einmalig pro Person/Organisation zu verwenden, daher bei mehreren Zuständigkeiten einer Person/Organisation diese mehrfach anlegen -->
                 </respStmt>
@@ -81,7 +77,7 @@
                 </pubPlace><!--@ref nicht DTA-konform-->
                 <date type="publication" when-iso="YYYY-MM-DD">[Entstehungs-/Erscheinungsdatum der Textausgabe]</date>
                 <availability> <!-- ggf. mehrfach zu verwenden -->
-                    <licence> <!-- @target in DTABf verpflichtend -->
+                    <licence target="[URL auf Lizentext]">
                         <p>[Nennung der Lizenz der Textausgabe]</p><!--geschlossene Auswahlliste wie in DBT (siehe Textdatei)-->
                     </licence>
                 </availability>
@@ -98,10 +94,10 @@
             </seriesStmt>
             <notesStmt><!-- kann als Container für weitere vom ThULBBf/DTABf nicht erfasste Informationen dienen; ; prüfen ob hier weitere Elemente möglich sind, um diese Angaben zumindest basal strukturieren zu können z.B. <ab type="sourceExtent"> o.ä.; ggf. <![CDATA[...]] nutzen; Alternative: editorialDecl ? -->
                 <note type="remarkDocument">[Zusatzinformationen zur Textausgabe]</note>
-                <note type="remarkDocument" subtype="editingStatus">In Bearbeitung | Bearbeitung abgeschlossen</note>
-                <note type="remarkDocument" subtype="editingStatusSpecific">[Freitextfeld für Bearbeitungstatus nach projekteigener Nomenklatur]</note>
+                <note type="editingStatus">In Bearbeitung | Bearbeitung abgeschlossen</note>
+                <note type="editingStatusSpecific">[Freitextfeld für Bearbeitungstatus nach projekteigener Nomenklatur]</note>
                 <!-- Angabe zum Bearbeitungsstaus; @subtype nicht DTA-konform -->
-                <note type="remarkDocument" subtype="linkDocument">
+                <note type="linkDocument">
                     <ref>[Link auf eine mit dem Dokument zu verbindende Ressource]</ref>
                     <p>[Ausführungen/Erklärungen zum Link]</p>
                 </note>
@@ -131,17 +127,17 @@
                             [Publikationsort]
                             <note resp="#[Editoren-ID aus respStmt]">[Angaben zur Verortung durch Editor, bspw. Begründung der vorgenommenen Verortung, wenn kein oder falscher Ort auf Quelle notiert ist]</note><!-- @resp für XML-Edierende -->
                         </pubPlace>
-                        <date type="publication" calendar="gregorian|julian" when-iso="YYYY-MM-DD">[Entstehungs-/Erscheinungsdatum]
-                            <note type="remarkGregorianDate" resp="#[Editoren-ID aus respStmt]">[Angaben zur Datierung durch Editor bspw. Begründung der vorgenommenen Datierung, wenn kein oder falsches Datum auf Quelle notiert ist]</note>
+                        <date type="creation" calendar="gregorian|julian" when-iso="YYYY-MM-DD">[Entstehungsdatum der Quelle]
+                            <note type="remarkDate" resp="#[Editoren-ID aus respStmt]">[Angaben zur Datierung durch Editor bspw. Begründung der vorgenommenen Datierung, wenn kein oder falsches Datum auf Quelle notiert ist]</note>
                             <note type="alternativeDating" resp="#[Editoren-ID aus respStmt]">[Alternative Datierung, bspw. nach anderem Kalender]</note><!--alternativer Kalender muss im Kommentarfeld mit angegeben werden-->
                         </date><!-- @calender nicht DTABf-konform;-->
                             <!-- zulässige Alternativen für @when: @notBefore-iso (specifies the earliest possible date for the event in standard form, e.g. yyyy-mm-dd.); @notAfter-iso (specifies the latest possible date for the event in standard form, e.g. yyyy-mm-dd.); @from-iso; @to-iso -->
                         <!--es ist nur eine Datumsangabe zulässig. Wenn der Brief an verschiedenen Tagen geschrieben wurde, so ist das frühestmögliche Datum anzugeben und weitere Datierungen ggf. in der Erklärung zu erwähnen-->
                     </publicationStmt>
                     <seriesStmt><!-- ggf. Angabe zur übergeordneten Publikation -->
-                        <title level="u" type="main|sub">[Titel/Untertitel der übergeordneten Reihe/Serie]</title><!-- für unveröffentlichte Manuskripte muss level-Wert "u" unbedingt hinzugefügt werden, ist bis dato nämlich nicht DTABf-konform -->
+                        <title type="main|sub">[Titel/Untertitel der übergeordneten Reihe/Serie]</title>
                         <biblScope unit="volume">[Band einer Reihe/Serie]</biblScope>
-                        <biblScope unit="pages">[Angabe, welche Seiten bzw. Blätter das Quellendokument umfasst]</biblScope>
+                        <biblScope unit="page">[Angabe, welche Seiten bzw. Blätter das Quellendokument umfasst]</biblScope>
                     </seriesStmt>
                     <notesStmt>
                         <note type="remarkSource">[Für Kommentar zur zugrundeliegenden Quelle; auch Bereich für quellenkritische Anmerkungen/Einordnungen/ Interpretationen, historische Einordnungen der Quelle, die woanders nicht zuordbar sind, insbesondere innere Quellenkritik, z.B. zu möglichen Intentionen und Adressaten der Autorin/des Autors, Entstehensumständen etc.; bspw. auch Angaben zu weiteren (bisher unveröffentlichten!) Kopien/Abschriften der beschriebenen Quelle in der bewahrenden Institution oder anderswo und Angaben zu inhaltlichen, intellektuellen Beziehungen/Abstammungen der Quelle zu/von anderen überkommenen Dokumenten desselben Textes]</note>
@@ -196,6 +192,7 @@
                         </summary>
                         <msItem>
                             <incipit>[Incipit]</incipit>
+                            <explicit>[Explicit]</explicit>
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -204,9 +201,9 @@
                                 <support>
                                     <material>[Beschreibmaterial, z.B. Papier, Pergament, Stoff, ?]</material><!--geschlossene Auswahlliste-->
                                     <watermark>[Beschreibung etwaiger Wasserzeichen]
-                                        <ref>[URL auf externe Ressource z.B. Piccard oder WZIS]</ref>
+                                        <ref target="[URL]">[URL auf externe Ressource z.B. Piccard oder WZIS]</ref>
                                     </watermark>
-                                    <stamp>[Beschreibung etwaiger Stempel]</stamp>
+                                    <stamp>[Beschreibung etwaiger Stempel]</stamp><!--hier auch Briefmarken?-->
                                 </support>
                                 <extent>
                                     <measure type="pages">[Umfang der Quelle in Seiten]</measure><!--aus biblFull/extent zu kopieren-->
@@ -239,7 +236,7 @@
                             </handNote>
                         </handDesc>
                         <scriptDesc><!-- scriptDesc wird von DTABf nicht untersützt; entfällt bei Druckschriften zu Gunsten von typeDesc -->
-                            <scriptNote scope="major" script="217Latf | 215Latn | 160Arab">überwiegend [Kurrentschrift | Lateinschrift | Arabische Schrift]</scriptNote><!-- vorherrschende Schriftsysteme; Auswahlmöglichkeit nach geschlossener Liste nach ISO 15924; wiederholbar -->
+                            <scriptNote scope="major" script="Latf | Latn | Arab" scriptRef="http://www.unicode.org/iso15924/">überwiegend [Kurrentschrift | Lateinschrift | Arabische Schrift]</scriptNote><!-- vorherrschende Schriftsysteme; Auswahlmöglichkeit nach geschlossener Liste nach ISO 15924; wiederholbar -->
                             <scriptNote>
                                 <p>[Beschreibung des Schriftbildes (z.B. klein, groß, weitgezogen, engstehend, sauber, unsauber etc.) und nähere Beschreibung vorherrschender und weiterer auftretender Schriftarten (z.B. Deutsche Kurrent, Kanzleischrift, Aktenschrift, Sütterlin, Offenbacher, Schwabacher Antiqua, Antiqua)]</p>
                             </scriptNote>
@@ -276,7 +273,7 @@
                 <!-- listWit nur für xml-edierende -->
                 <listWit><!-- Nennung aller edierten Textzeugen falls mehrere Textzeugen der Handschrift überliefert sind und mittels textkritischem Apparat ediert wurden --> <!--nicht DTABf-konform-->
                     <witness xml:id="[ID für Referenz von Transkription (rdg-Element) aus]" corresp="#referenceManuscript"/>
-                    <witness xml:id="[ID für Referenz von Transkription (rdg-Element) aus]" rend="copy | concept | engrossedCopy"><!--mit @rend Spezifizierung der Entstehungsstufe der Quelle, ob es sich um einen Entwurf, eine Abschrift oder die Ausfertigung/beglaubigte Reinschrift handelt-->
+                    <witness xml:id="[ID für Referenz von Transkription (rdg-Element) aus]" rend="copy | concept | engrossedCopy"><!--mit @rend Spezifizierung der Entstehungsstufe/Ausreifungsgrad (Terminologie Ausreifungsgrad bei Kalliope) der Quelle, ob es sich um einen Entwurf, eine Abschrift oder die Ausfertigung/beglaubigte Reinschrift handelt-->
                         [Angaben zum weiteren Textzeugen, z.B. ob es sich um eine Kopie oder einen Entwurf handelt]
                         <ref target="[URI auf externe Referenz, z.B. einen Katalogeintrag oder einen Online-Volltext]"/>
                     </witness><!-- wiederholbar für weitere Textzeugen -->
@@ -284,32 +281,27 @@
             </sourceDesc>
         </fileDesc>
         <encodingDesc>
-            <editorialDecl><!-- Angaben zu den Transkriptionsprinzipien; überlegen, ob diese nicht doch besser in gesondertes Dokument namens Transkriptionsrichtlinien ausgelagert werden, um sie nicht bei jedem Dokument erneut angeben zu müssen; von hier aus kann auf Transkriptionsrichtlinien verwiesen werden-->
-                <normalization method="markup|silent">
-                    <p>[Beschreibung in welchem Maß, auf welche Art und aus welchem Grund Normalisierungen bei der Transkription vorgenommen wurden]</p>
+            <editorialDecl>
+                <normalization method="markup">
+                    <p>Zusätzliche Angabe zu vorgenommenen Normalisierungen der Quelle</p>
                 </normalization>
-                <correction method="markup|silent">
-                    <p>[Beschreibung in welchem Maß, auf welche Art und aus welchem Grund Korrekturen bei der Transkription vorgenommen wurden]</p>
+                <correction method="markup">
+                    <p>Zusätzliche Angaben zu vorgenommenen Korrekturen der Quelle</p>
                 </correction>
-                <punctuation marks="all|none|some">
-                    <p>[Beschreibung auf welche Art und aus welchem Grund die Zeichensetzung so transkribiert wurde und nicht anders]</p>
+                <punctuation marks="some">
+                    <p>Zusätzliche Angaben zum Umgang mit der Interpunktion der Quelle</p>
                 </punctuation>
-                <hyphenation eol="all|some|hard|none">
-                    <p>Beschreibung, wie die Silbentrennung am Zeilenende des Quelltextes in der kodierten Fassung behandelt wurde.</p>
-                </hyphenation>
-                <p>[weitere Angaben zu den Transkriptions- und Annotationsprinzipien]</p>
-                <p>[Dokumentation, wo vom DTABf abgewichen wird; muss vorausgefüllt werden!]</p>
-                <p>[Dokumentation, wo vom ThULBBf abgewichen wird; für XML-Edierende]</p>
-                <!-- editorialDecl/p eignet sich auch als Container für Informationen zur Quelle/Transkription, die nicht im DTABf abgebildet werden können; prüfen ob hier weitere Elemente möglich sind, um diese Angaben zumindest basal strukturieren zu können z.B. <ab type="sourceExtent"> ...; ggf. <![CDATA[...]] nutzen -->
+                <p>Die Transkription und Auszeichnungstiefe erfolgte nach den unter <ref target="[URL]">[URL zum TEI-DOkument mit den Transkriptionsrichtlinien, bspw. denen des Editionsportals Thüringen bzw. projekteigenen]</ref> formulierten Richtlinien.</p><!--Freitextfeld für Linkangabe notwendig (s. DTABf-Metadatenmaske)-->
             </editorialDecl>
+            <!-- editorialDecl/p eignet sich auch als Container für Informationen zur Quelle/Transkription, die nicht im DTABf abgebildet werden können -->
             <classDecl><!-- nicht DTABf-konform --> <!-- Elementinhalte nicht veränderbar -->
-                <taxonomy xml:id="ThULBNTB"><!--s.u.-->
+                <taxonomy xml:id="thulbntb"><!--s.u.-->
                     <bibl>ThULB Notification of Thüringian Bibliography</bibl>
                 </taxonomy>
-                <taxonomy xml:id="ThULBCTG"><!--s.u.-->
+                <taxonomy xml:id="thulbctg"><!--s.u.-->
                     <bibl>ThULB Classification of Text Genre</bibl>
                 </taxonomy>
-                <taxonomy xml:id="ThULBCHS"><!--s.u.-->
+                <taxonomy xml:id="thulbchs"><!--s.u.-->
                     <bibl>ThULB Classification of Historical Systematic</bibl>
                 </taxonomy>
                 <taxonomy xml:id="ddc"><!--s.u.-->
@@ -325,7 +317,7 @@
         </encodingDesc>
         <profileDesc>
             <langUsage><!-- in der Quelle auftretende Sprachen -->
-                <language ident="[Code nach ISO 639-3, z.B. deu]"/>
+                <language ident="[Code nach ISO 639-3, z.B. deu]" source="iso639-3"/>
                 <!-- weitere <language> möglich -->
             </langUsage>
             <textClass><!-- Klassifizierungen der Quelle -->
@@ -334,20 +326,20 @@
                 </classCode>
                 <classCode scheme="#gnd">
                     <term ref="[GND-URI]">[Sachschlagwort lt. GND, z.B. Allgemeinbegriffe (saz)]</term>
-                    <!--Elementinhalt aus GND beziehen!-->
+                    <!--Elementinhalt aus GND beziehen! z.B. über SRU-Protokoll wie bei Namen/Organisationen: Einschränkung auf Sachschlagwörter mittels "COD=s"-->
                     <!--mehrere term möglich-->
                 </classCode>
-                <classCode scheme="#ThULBCTG">
+                <classCode scheme="#thulbctg">
                     <term>[Begriff aus Text-Genre-Klassifikation der ThULB, z.B. Brief]</term><!--ggf. mehrfach zu Verwenden-->
                 </classCode>
                 <classCode scheme="#thuringianReference"><!--geschlossene Liste mit nachfolgender Auswahlmöglichkeit; nur zutreffendes/angewähltes <term> wird ausgezeichnet; Auswahl beider Optionen möglich-->
                     <term type="extrinsic">entstehungs-/sammlungsbezogen, institutionell oder administrativ-editorisch</term>
                     <term type="intrinsic">inhaltlich/sachlich</term>
                 </classCode>
-                <classCode scheme="#ThULBNTB">
+                <classCode scheme="#thulbntb">
                     <term>[Begriff mit Notifikation nach Thüringen-Bibliographie, z.B. 728000 Kulturelles Leben]</term><!--ggf. mehrfach zu verwenden-->
                 </classCode>
-                <classCode scheme="#ThULBCHS">
+                <classCode scheme="#thulbchs">
                     <term>[Zeitraum aus historischer Systematik der ThULB; Auswahlmöglichkeit nach Jahrhundert: 9.-20.Jh., z.B. 18. Jahrhundert]</term><!--ggf. mehrfach zu verwenden-->
                 </classCode>
                 <keywords scheme="projectTopics">
@@ -357,15 +349,16 @@
             <correspDesc><!-- derzeit noch nicht DTABf-konform --> <!-- nur im Falle von Briefen/Postkarten/Korrespondenzen zu verwenden -->
                 <correspAction type="sent | received"> <!-- wird bei Rollenauswahl Absender/Empfänger automatisch generiert -->
                     <persName ref="[URI auf externe DB (GND, VIAF, UrMEL]"><!-- falls unbekannt @ref weglassen-->
+<!-- entspricht den UrMEL-Rollen Absender/Empfänger -->
                         <surname>[Nachname]</surname>
                         <forename>[Vorname]</forename>
                         <!-- [siehe oben für weitere mögliche Kindelemente] -->
                     </persName>
                     <!--falls <author role="sender"> oder <author role="scribe|author"> UND ein Empfänger (in respStmt) gewählt ist, wird persName hier aus fileDesc/titleStmt/author bezogen-->
                     <!--auch orgName möglich -->
-                    <placeName ref="[URI auf externe DB (GND, VIAF, UrMEL]"><!-- mit @cert="low|high" Gewissheit der Lokalisierung angebbar -->
+                    <placeName ref="[URI auf externe DB (GND, VIAF, UrMEL]"><!-- mit @cert="proven|obvious|probable" Gewissheit der Lokalisierung angebbar -->
                         [Name des Sende- bzw. Empfangsortes]</placeName><!--Absendeort aus fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace zu beziehen; Empfangsort muss separat eingegeben werden-->
-                    <date calendar="gregorian|julian" when-iso="YYYY-MM-DD">[Absendedatum des Briefes]</date><!-- mit @cert="low|high" Gewissheit der Datierung angebbar! --> <!-- kann neben @when-iso auch @from-iso, @to-iso, @notBefore-iso und @notAfter-iso annehmen -->
+                    <date calendar="gregorian|julian" when-iso="YYYY-MM-DD">[Absendedatum des Briefes]</date><!-- mit @cert="proven|obvious|probable" Gewissheit der Datierung angebbar! --> <!-- kann neben @when-iso auch @from-iso, @to-iso, @notBefore-iso und @notAfter-iso annehmen -->
                     <!-- date ist ohne @type="publication" und ohne die note-Kindelemente aus fileDesc/sourceDesc/biblFull/publicationStmt/date zu beziehen -->
                 </correspAction>
                 <!-- <correspAction> kann wegen @type="sent|received" zweifach erscheinen -->
@@ -391,6 +384,12 @@
             </change>
         </revisionDesc>
     </teiHeader>
+    <!--<facsimile> <!-\-für Einbindung Bildkoordinaten bei zeilengenauer Zuweisung von Transkription und Bildzeile in der Arbeit mit Trascribo oder Transkribus (ist Transkribus-Lösung; kann alternativ auch in sourceDoc mit <line> erfolgen; welche Lösung nutzt FuD?-\->
+        <surface>
+            <graphic url=""/>
+                <zone></zone>
+        </surface>
+    </facsimile>-->
     <text type="transcription">
         <body>
             <p>[Transkription hier]</p>
