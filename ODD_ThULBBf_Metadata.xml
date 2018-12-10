@@ -29,20 +29,20 @@
             <divGen type="toc"/>
         </front>
         <body>
-            <schemaSpec ident="myTEI" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
+            <schemaSpec ident="basisformat" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
                 <!-- required modules -->
                 <moduleRef key="core"
-                    except="abbr add addrLine address analytic biblStruct binaryObject cb choice cit citedRange corr del distinct divGen email emph expan foreign gap gb gloss graphic head headItem headLabel hi imprint index item l lb lg list measureGrp media meeting mentioned milestone monogr name num orig pb postBox postCode ptr q quote reg relatedItem rs said series sic soCalled sp speaker stage street teiCorpus textLang time unclear unit"/>
+                    include="author bibl biblScope date desc editor label listBibl measure note p pubPlace publisher ref resp respStmt term title"/>
                 <moduleRef key="tei" except=""/>
                 <moduleRef key="header"
-                    except="abstract appInfo application authority cRefPattern calendar calendarDesc catDesc catRef category creation distributor funder geoDecl hyphenation interpretation listChange listPrefixDef namespace prefixDef principal projectDesc quotation refState refsDecl rendition samplingDecl schemaRef segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl xenoData"/>
+                    include="availability biblFull change classCode classDecl correction correspAction correspContext correspDesc edition editionStmt editorialDecl encodingDesc extent fileDesc handNote idno keywords langUsage language licence normalization notesStmt profileDesc publicationStmt punctuation revisionDesc scriptNote seriesStmt sourceDesc taxonomy teiHeader textClass titleStmt"/>
                 <moduleRef key="textstructure"
-                    except="argument back byline closer dateline div div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText front group imprimatur opener postscript salute signed titlePage titlePart trailer"/>
+                    include="TEI body text"/>
                 <!-- optional modules -->
                 <moduleRef key="msdescription"
-                    except="acquisition adminInfo altIdentifier binding catchwords collection colophon custEvent custodialHist depth filiation finalRubric heraldry institution locus locusGrp msFrag msItemStruct msName msPart musicNotation objectType origDate origPlace origin provenance recordHist rubric seal secFol signatures source surrogates typeDesc typeNote"/>
+                    include="accMat additional additions bindingDesc collation condition decoDesc decoNote dim dimensions explicit foliation handDesc height history incipit layout layoutDesc material msContents msDesc msIdentifier msItem objectDesc physDesc repository scriptDesc sealDesc stamp summary support supportDesc watermark width"/>
                 <moduleRef key="namesdates"
-                    except="affiliation age birth bloc climate country death district education faith floruit geo geogFeat geogName langKnowledge langKnown listNym listRelation location nationality nym occupation offset personGrp persona population region relation residence settlement sex socecStatus state terrain trait"/>
+                    include="addName event forename genName listEvent listOrg listPerson listPlace nameLink org orgName persName person place placeName roleName surname"/>
                 <elementSpec ident="author" module="core" mode="change">
                     <attList>
                         <attDef ident="ana" mode="delete"/>
@@ -3057,7 +3057,7 @@
                     </attList>
                 </elementSpec>
                 <moduleRef key="textcrit"
-                    except="app lacunaEnd lacunaStart lem listApp rdg rdgGrp variantEncoding wit witDetail witEnd witStart"/>
+                    include="listWit witness"/>
                 <elementSpec ident="listWit" module="textcrit" mode="change">
                     <attList>
                         <attDef ident="ana" mode="delete"/>
@@ -3638,7 +3638,7 @@
                     </attList>
                 </elementSpec>
                 <moduleRef key="linking"
-                    except="ab alt altGrp anchor join joinGrp link linkGrp seg timeline when"/>
+                    include=""/><!-- @include remains empty because we only want to select attributes from that class (not elements) -->
             </schemaSpec>
         </body>
     </text>
