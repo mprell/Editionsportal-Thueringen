@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ODD/out/ODD_ThULBBf_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title>
                 <author>
-                    <persName xml:id="EB">
-                        <ref type="gnd">139081127</ref>
-                        <ref type="viaf">95671766</ref>
-                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
-                        <ref type="wikidata">Q323050</ref>
+                    <name type="person" xml:id="EB">
+                        <idno type="gnd">139081127</idno>
+                        <idno type="viaf">95671766</idno>
+                        <idno type="urmel">00013623</idno>
+                        <idno type="wikidata">Q323050</idno>
                         <surname>Reuß-Ebersdorf</surname>
                         <forename>Erdmuthe Benigna</forename>
                         <nameLink>von</nameLink>
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
-                    </persName>
+                    </name>
                 </author>
                 <editor>
-                    <persName>
-                        <ref type="gnd">1133022898</ref>
+                    <name type="person">
+                        <idno type="gnd">1133022898</idno>
                         <surname>Prell</surname>
                         <forename>Martin</forename>
-                    </persName>
+                    </name>
                 </editor>
                 <editor>
-                    <persName>
-                        <ref type="gnd">130511005</ref>
+                    <name type="person">
+                        <idno type="gnd">130511005</idno>
                         <surname>Schmidt-Funke</surname>
                         <forename>Julia A.</forename>
-                    </persName>
+                    </name>
                 </editor>
                 <respStmt>
-                    <orgName xml:id="thulb">
-                        <ref type="gnd">5053491-9</ref>
+                    <name type="organisation" xml:id="thulb">
+                        <idno type="gnd">5053491-9</idno>
                         Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
-                    </orgName> 
+                    </name> 
                     <resp>
                         <note type="remarkResponsibility">Digitalisierung</note>
                     </resp>
@@ -44,29 +45,29 @@
                     </resp>
                 </respStmt>
                 <respStmt>
-                    <persName xml:id="KW">
+                    <name type="person" xml:id="KW">
                         <surname>Wolf</surname>
                         <forename>Kerstin</forename>
-                    </persName>
+                    </name>
                     <resp>
                         <note type="remarkResponsibility">Quellenrecherche</note>
                     </resp>
                 </respStmt>
                 <respStmt>
-                    <persName xml:id="unknown01">
+                    <name type="person" xml:id="unknown01">
                         <surname>N.N.</surname>
                         <forename>N.N</forename>
-                    </persName>
+                    </name>
                     <resp>
                         <note type="remarkResponsibility">Ersttranskription</note>
                     </resp>
                 </respStmt>
                 <respStmt>
-                    <persName xml:id="MP">
-                        <ref type="gnd">1133022898</ref>
+                    <name type="person" xml:id="MP">
+                        <idno type="gnd">1133022898</idno>
                         <surname>Prell</surname>
                         <forename>Martin</forename>
-                    </persName>
+                    </name>
                     <resp>
                         <note type="remarkResponsibility">Quellenrecherche</note>
                     </resp>
@@ -92,14 +93,14 @@
             </extent>
             <publicationStmt>
                 <publisher>
-                    <orgName role="hostingInstitution">
-                        <ref type="gnd">5053491-9</ref>
-                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)</orgName>
-                    <orgName role="project">Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)</orgName><!-- Projektname muss in UrMEL zuvor angelegt worden sein -->
+                    <name type="organisation" role="hostingInstitution">
+                        <idno type="gnd">5053491-9</idno>
+                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)</name>
+                    <name type="project">Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)</name><!-- Projektname muss in UrMEL zuvor angelegt worden sein -->
                 </publisher>
                 <pubPlace>
-                    <ref type="gnd">4028557-1</ref>
-                    <ref type="geonames">2895044</ref>
+                    <idno type="gnd">4028557-1</idno>
+                    <idno type="geonames">2895044</idno>
                     Jena
                 </pubPlace>
                 <date type="publication" when-iso="2017-02-28">28. Februar 2017</date>
@@ -135,17 +136,17 @@
                     <titleStmt>
                         <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title><!-- aus fileDesc/titleStmt/title[@type="main"] bezogen -->
                         <author>
-                            <persName>
-                                <ref type="gnd">139081127</ref>
-                                <ref type="viaf">95671766</ref>
-                                <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
-                                <ref type="wikidata">Q323050</ref>
+                            <name type="person">
+                                <idno type="gnd">139081127</idno>
+                                <idno type="viaf">95671766</idno>
+                                <idno type="urmel">00013623</idno>
+                                <idno type="wikidata">Q323050</idno>
                                 <surname>Reuß-Ebersdorf</surname>
                                 <forename>Erdmuthe Benigna</forename>
                                 <nameLink>von</nameLink>
                                 <addName>E. B. G. R.</addName>
                                 <roleName>Gräfin</roleName>
-                            </persName>
+                            </name>
                         </author><!-- aus filesDesc/titleStmt/author bezogen -->
                     </titleStmt>
                     <extent>
@@ -154,8 +155,8 @@
                     <publicationStmt>
                         <publisher/>
                         <pubPlace>
-                            <ref type="gnd">4823248-8</ref>
-                            <ref type="geonames">2933921</ref>
+                            <idno type="gnd">4823248-8</idno>
+                            <idno type="geonames">2933921</idno>
                             Ebersdorf (Thüringen)
                             <note resp="#MP">Der Ausstellungsort ist in der Quelle zwar unter einer anderen Schreibweise angegeben, er entspricht aber mit hoher Wahrscheinlichkeit dem identifizierten Ort. Von diesem aus wurde auch die Mehrzahl der übrigen Briefe der Gräfin verschickt.</note>
                         </pubPlace>
@@ -166,7 +167,7 @@
                     </publicationStmt>
                     <seriesStmt>
                         <title type="main">Correspondenz in der Ebersdorf. Vormundschafts-Angel. (1712-1722)</title>
-                        <biblScope unit="page">56r-60v</biblScope>
+                        <biblScope unit="pages">56r-60v</biblScope>
                     </seriesStmt>
                     <notesStmt>
                         <note type="remarkSource">Es existieren keine weiteren Abschriften der Quelle. Der Brief ist über einen längeren Zeitraum hinweg verfasst worden. Als einer der wenigen Briefe der Edition hat er eine vollständiges Datierung durch die Schreiberin erhalten. Der Brief wird zwar im Thüringischen Staatsarchiv Greiz aufbewahrt (Depositum), befindet sich aber in Besitz des Fürsten Reuß Heinrich XIV.</note>
@@ -189,48 +190,51 @@
                             <p>Der Brief behandelt folgende Themenkomplexe: Differenzen mit Lobenstein um die Teilung der Herrschaft Hirschberg, Differenzen mit Hirschbergern und militärisches Eingreifen, Lobensteiner Seniorat und Direktorium, Nachfolge Superintendent, Geschlechtstag in Gera, Reform-/Autonomieabsichten Erdmuthes (eigenes Votum und Inspektionsamt), Mitvormundschaft Carl Ottos von Solms-Laubach-Utphe, Entbindung Marie Eleonore Emilies Reuß-Köstritz</p>
                             <listPerson type="mentioned">
                                 <person>
-                                    <persName>
-                                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00015648</ref>
+                                    <name type="person">
+                                        <idno type="urmel">00015648</idno>
                                         <surname>Reuß-Köstritz, geb. Promnitz-Dittersbach</surname>
                                         <forename>Marie Eleonore Emilie</forename>
                                         <nameLink>von</nameLink>
                                         <roleName>Gräfin</roleName>
-                                    </persName>
+                                    </name>
                                 </person>
                                 <person>
-                                    <persName>
-                                        <ref type="gnd">117462284</ref>
+                                    <name type="person">
+                                        <idno type="gnd">117462284</idno>
                                         <surname>Solms-Laubach-Utphe</surname>
                                         <forename>Carl Otto</forename>
                                         <nameLink>zu</nameLink>
                                         <roleName>Graf</roleName>
-                                    </persName>
+                                    </name>
                                 </person>
                             </listPerson>
                             <listPlace type="mentioned">
                                 <place>
-                                    <placeName>
-                                        <ref type="gnd">4020295-1</ref>
+                                    <geogName>
+                                        <idno type="gnd">4020295-1</idno>
                                         Gera
-                                    </placeName>
+                                    </geogName>
                                 </place>
                                 <place>
-                                    <placeName>
-                                        <ref type="gnd">4565852-3</ref>
+                                    <geogName>
+                                        <idno type="gnd">4565852-3</idno>
                                         Hirschberg
-                                    </placeName>
+                                    </geogName>
                                 </place>
                             </listPlace>
                             <listOrg type="mentioned">
                                 <org>
-                                    <orgName>
+                                    <name type="organisation">
                                         Gemeinschaftliches Konsistorium Reuß Jüngerer Linie
-                                    </orgName>
+                                    </name>
                                 </org>
                             </listOrg>
                             <listEvent type="mentioned">
-                                <event ref="http://d-nb.info/gnd/4134877-1 https://www.wikidata.org/wiki/Q150701">
-                                    <label>Spanischer Erbfolgekrieg</label>
+                                <event>
+                                    <label>
+                                        <idno type="wikidata">Q150701</idno>
+                                        Spanischer Erbfolgekrieg
+                                    </label>
                                 </event>
                             </listEvent>
                         </summary>
@@ -288,7 +292,7 @@
                         <decoDesc>
                             <decoNote>
                                 <p>Schwungvoll ausgeführte Initiale</p>
-                                <ref type="iconclass">49L171/</ref>
+                                <idno type="iconclass">49L171/</idno>
                             </decoNote>
                         </decoDesc>
                         <additions>
@@ -344,8 +348,41 @@
                 </punctuation>
                 <p>Die Transkription und Auszeichnungstiefe erfolgte nach den unter <ref target="xxx">[URL zum TEI-DOkument mit den Transkriptionsrichtlinien, bspw. denen des Editionsportals Thüringen bzw. projekteigenen]</ref> formulierten Richtlinien.</p>
             </editorialDecl>
+            <tagsDecl>
+                <rendition scheme="css" xml:id="rendition-aq">font-family:sans-serif</rendition>
+                <rendition scheme="css" xml:id="rendition-b">font-weight:bold</rendition>
+                <rendition scheme="css" xml:id="rendition-blue">color:blue</rendition>
+                <rendition scheme="css" xml:id="rendition-c"
+                    >display:block; text-align:center</rendition>
+                <rendition scheme="css" xml:id="rendition-et"
+                    >display:block; margin-left:2em; text-indent:0</rendition>
+                <rendition scheme="css" xml:id="rendition-et2"
+                    >display:block; margin-left:4em; text-indent:0</rendition>
+                <rendition scheme="css" xml:id="rendition-et3"
+                    >display:block; margin-left:6em; text-indent:0</rendition>
+                <rendition scheme="css" xml:id="rendition-f">border:1px dotted silver</rendition>
+                <rendition scheme="css" xml:id="rendition-fr">border:1px dotted silver</rendition>
+                <rendition scheme="css" xml:id="rendition-g">letter-spacing:0.125em</rendition>
+                <rendition scheme="css" xml:id="rendition-i">font-style:italic</rendition>
+                <rendition scheme="css" xml:id="rendition-in">font-size:150%</rendition>
+                <rendition scheme="css" xml:id="rendition-k">font-variant:small-caps</rendition>
+                <rendition scheme="css" xml:id="rendition-larger">font-size:larger</rendition>
+                <rendition scheme="css" xml:id="rendition-red">color:red</rendition>
+                <rendition scheme="css" xml:id="rendition-right"
+                    >display:block; text-align:right</rendition>
+                <rendition scheme="css" xml:id="rendition-s"
+                    >text-decoration:line-through</rendition>
+                <rendition scheme="css" xml:id="rendition-smaller">font-size:smaller</rendition>
+                <rendition scheme="css" xml:id="rendition-sub"
+                    >vertical-align:sub; font-size:.7em</rendition>
+                <rendition scheme="css" xml:id="rendition-sup"
+                    >vertical-align:super; font-size:.7em</rendition>
+                <rendition scheme="css" xml:id="rendition-u">text-decoration:underline</rendition>
+                <rendition scheme="css" xml:id="rendition-uu"
+                    >border-bottom:double 3px #000</rendition>
+            </tagsDecl>
             <classDecl>
-                <taxonomy xml:id="thulbntb" >
+                <taxonomy xml:id="thulbntb">
                     <bibl>ThULB Notification of Thüringian Bibliography</bibl>
                 </taxonomy>
                 <taxonomy xml:id="thulbctg">
@@ -363,13 +400,16 @@
                 <taxonomy xml:id="thuringianReference">
                     <desc>Indicates which Thuringian reference the historical source or the source edition in the context of which the historical source is edited has.</desc>
                 </taxonomy>
+                <taxonomy xml:id="projectTopics">
+                    <desc>Refers to a project-specific topic list.</desc>
+                </taxonomy>
             </classDecl>
         </encodingDesc>
         <profileDesc>
             <langUsage>
-                <language ident="deu" source="iso639-3">Deutsch</language>
-                <language ident="lat" source="iso639-3">Latein</language>
-                <language ident="fra" source="iso639-3">Französisch</language>
+                <language ident="deu">Deutsch</language>
+                <language ident="lat">Latein</language>
+                <language ident="fra">Französisch</language>
             </langUsage>
             <textClass>
                 <classCode scheme="#ddc" >
@@ -392,22 +432,22 @@
                         Pietismus
                     </term>
                 </classCode>
-                <classCode scheme="#ThULBCTG">
+                <classCode scheme="#thulbctg">
                     <term>Brief</term>
                 </classCode>
                 <classCode scheme="#thuringianReference">
                     <term type="extrinsic">entstehungs-/sammlungsbezogen, institutionell oder administrativ-editorisch</term>
                     <term type="intrinsic">inhaltlich/sachlich</term>
                 </classCode>
-                <classCode scheme="#ThULBNTB">
+                <classCode scheme="#thulbntb">
                     <term>242050 (Herren, Grafen, Fürsten Reuß)</term>
                     <term>242010 (Geschichte Neuzeit: Allgemeines &gt;Thüringen&lt;)</term>
                     <term>614000 (Kirchengeschichte &gt;Thüringen&lt;)</term>
                 </classCode>
-                <classCode scheme="#ThULBCHS">
+                <classCode scheme="#thulbchs">
                     <term>18. Jahrhundert]</term>
                 </classCode>
-                <keywords scheme="projectTopics">
+                <keywords scheme="#projectTopics">
                     <term>Differenzen mit Reuß-Lobenstein</term>
                     <term>Kirchen- und Schulangelegenheiten</term>
                     <term>Gemeinschaftliches System Reuß jüngerer Linie, Ebersdorfer Votum und Autonomiebestrebungen</term>
@@ -417,37 +457,37 @@
             </textClass>
             <correspDesc>
                 <correspAction type="sent">
-                    <persName>
-                        <ref type="gnd">139081127</ref>
-                        <ref type="viaf">95671766</ref>
-                        <ref type="urmel">https://archive.thulb.uni-jena.de/hisbest/receive/HisBest_person_00013623</ref>
-                        <ref type="wikidata">Q323050</ref>
+                    <name type="person">
+                        <idno type="gnd">139081127</idno>
+                        <idno type="viaf">95671766</idno>
+                        <idno type="urmel">00013623</idno>
+                        <idno type="wikidata">Q323050</idno>
                         <surname>Reuß-Ebersdorf</surname>
                         <forename>Erdmuthe Benigna</forename>
                         <nameLink>von</nameLink>
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
-                    </persName>
-                    <placeName>
-                        <ref type="gnd">4823248-8</ref>
-                        <ref type="geonames">2933921</ref>
+                    </name>
+                    <name type="person">
+                        <idno type="gnd">4823248-8</idno>
+                        <idno type="geonames">2933921</idno>
                         Ebersdorf
-                    </placeName>
+                    </name>
                     <date calendar="gregorian" when-iso="1712-11-17" cert="high">17. Dezember 1712
                     </date>
                 </correspAction>
                 <correspAction type="received">
-                    <persName>
-                        <ref type="gnd">130132365</ref>
+                    <name type="person">
+                        <idno type="gnd">130132365</idno>
                         <surname>Reuß-Schleiz zu Köstritz</surname>
                         <forename>Heinrich XXIV.</forename>
                         <nameLink>von</nameLink>
                         <roleName>Graf</roleName>
-                    </persName>
-                    <placeName cert="high">
-                        <ref type="gnd">4320217-2</ref>
+                    </name>
+                    <name type="person" cert="high">
+                        <idno type="gnd">4320217-2</idno>
                         Köstritz
-                    </placeName>
+                    </name>
                     <date/>
                 </correspAction>
                 <correspContext>
@@ -474,7 +514,7 @@
     </teiHeader>
     <text>
         <body>
-            <p/>
+            <p><index><term></term></index> <app><rdg wit="#PK16_56B"><note hand="">asdasda</note></rdg></app>            </p>
         </body>
     </text>
 </TEI>
