@@ -514,7 +514,7 @@
     </teiHeader>
     <text>
         <body>
-            <p><index><term></term></index> <app><rdg wit="#PK16_56B"><note hand="">asdasda</note></rdg></app>            </p>
+            <p/>
         </body>
     </text>
 </TEI>
