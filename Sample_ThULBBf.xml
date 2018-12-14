@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title>
-                <author>
+                <respStmt>
                     <name type="person" xml:id="EB">
                         <idno type="gnd">139081127</idno>
                         <idno type="viaf">95671766</idno>
@@ -17,49 +17,18 @@
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
                     </name>
-                </author>
-                <editor>
-                    <name type="person">
-                        <idno type="gnd">1133022898</idno>
-                        <surname>Prell</surname>
-                        <forename>Martin</forename>
-                    </name>
-                </editor>
-                <editor>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Author
+                    </resp>
+                </respStmt>
+                <respStmt>
                     <name type="person">
                         <idno type="gnd">130511005</idno>
                         <surname>Schmidt-Funke</surname>
                         <forename>Julia A.</forename>
                     </name>
-                </editor>
-                <respStmt>
-                    <name type="organisation" xml:id="thulb">
-                        <idno type="gnd">5053491-9</idno>
-                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
-                    </name> 
-                    <resp>
-                        <note type="remarkResponsibility">Digitalisierung</note>
-                    </resp>
-                    <resp>
-                        <note type="remarkResponsibility">langfristige Bereitstellung</note>
-                    </resp>
-                </respStmt>
-                <respStmt>
-                    <name type="person" xml:id="KW">
-                        <surname>Wolf</surname>
-                        <forename>Kerstin</forename>
-                    </name>
-                    <resp>
-                        <note type="remarkResponsibility">Quellenrecherche</note>
-                    </resp>
-                </respStmt>
-                <respStmt>
-                    <name type="person" xml:id="unknown01">
-                        <surname>N.N.</surname>
-                        <forename>N.N</forename>
-                    </name>
-                    <resp>
-                        <note type="remarkResponsibility">Ersttranskription</note>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Editor
                     </resp>
                 </respStmt>
                 <respStmt>
@@ -68,14 +37,47 @@
                         <surname>Prell</surname>
                         <forename>Martin</forename>
                     </name>
-                    <resp>
-                        <note type="remarkResponsibility">Quellenrecherche</note>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Editor
                     </resp>
-                    <resp>
-                        <note type="remarkResponsibility">Transkription</note>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Research team member
                     </resp>
-                    <resp>
-                        <note type="remarkResponsibility">Auszeichnung nach TEI P5</note>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Transcriber
+                    </resp>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Markup Editor
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <name type="organisation" xml:id="thulb">
+                        <idno type="gnd">5053491-9</idno>
+                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
+                    </name> 
+                    <resp ref="[URL auf UrMEL-Relator-Systematik">
+                        Digitalisierung
+                    </resp>
+                    <resp ref="[URL auf UrMEL-Relator-Systematik">
+                        langfristige Bereitstellung
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <name type="person" xml:id="KW">
+                        <surname>Wolf</surname>
+                        <forename>Kerstin</forename>
+                    </name>
+                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                        Research team member
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <name type="person" xml:id="unknown01">
+                        <surname>N.N.</surname>
+                        <forename>N.N</forename>
+                    </name>
+                    <resp ref="[URL auf UrMEL-Relator-Systematik">
+                        Ersttranskription
                     </resp>
                 </respStmt>
             </titleStmt>
@@ -135,7 +137,7 @@
                 <biblFull>
                     <titleStmt>
                         <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title><!-- aus fileDesc/titleStmt/title[@type="main"] bezogen -->
-                        <author>
+                        <respStmt>
                             <name type="person">
                                 <idno type="gnd">139081127</idno>
                                 <idno type="viaf">95671766</idno>
@@ -147,7 +149,10 @@
                                 <addName>E. B. G. R.</addName>
                                 <roleName>Gräfin</roleName>
                             </name>
-                        </author><!-- aus filesDesc/titleStmt/author bezogen -->
+                            <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                                Author
+                            </resp>
+                        </respStmt><!-- aus filesDesc/titleStmt/author ohne @xml:id bezogen -->
                     </titleStmt>
                     <extent>
                         <measure type="pages">5</measure>
@@ -514,7 +519,9 @@
     </teiHeader>
     <text>
         <body>
-            <p/>
+            <p>
+                
+            </p>
         </body>
     </text>
 </TEI>
