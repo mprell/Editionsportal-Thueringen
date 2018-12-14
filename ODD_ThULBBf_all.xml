@@ -33,7 +33,7 @@
             <schemaSpec ident="basisformat" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
                 <!-- required modules -->
                 <moduleRef key="core"
-                    include="abbr add addrLine address author bibl biblScope cb choice cit corr date del desc editor expan foreign gap head hi index item l label lb lg list listBibl measure milestone name note orig p pb pubPlace publisher q quote ref reg resp respStmt rs sic sp term title unclear"/>
+                    include="abbr add addrLine address bibl biblScope cb choice cit corr date del desc expan foreign gap head hi index item l label lb lg list listBibl measure milestone name note orig p pb pubPlace publisher q quote ref reg resp respStmt rs sic sp term title unclear"/>
                 <moduleRef key="tei"/>
                 <moduleRef key="header"
                     include="availability biblFull change classCode classDecl correction correspAction correspContext correspDesc edition editionStmt editorialDecl encodingDesc extent fileDesc handNote idno keywords langUsage language licence normalization notesStmt profileDesc publicationStmt punctuation rendition revisionDesc scriptNote seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt"/>
@@ -55,12 +55,12 @@
                 
                 <classSpec ident="att.ascribed.directed" module="tei" mode="delete" type="atts"/>
                 <classSpec ident="att.breaking" module="tei" mode="delete" type="atts"/>
-                <!--<classSpec ident="att.canonical" module="tei" mode="change" type="atts">
-                    <!-\- includes @ref -\->
+                <classSpec ident="att.canonical" module="tei" mode="change" type="atts">
+                    <!-- includes @ref -->
                     <attList>
                         <attDef ident="key" mode="delete"/>
                     </attList>
-                </classSpec>-->
+                </classSpec>
                 <classSpec ident="att.coordinated" module="transcr" mode="delete" type="atts"/>
                 <classSpec ident="att.cReferencing" module="tei" mode="delete" type="atts"/>
                 <classSpec ident="att.damaged" module="tei" mode="delete" type="atts"/>
@@ -1369,6 +1369,12 @@
                                 </valItem>
                             </valList>
                         </attDef>
+                        <attDef ident="calendar" mode="delete"/>
+                        <attDef ident="from-iso" mode="delete"/>
+                        <attDef ident="to-iso" mode="delete"/>
+                        <attDef ident="when-iso" mode="delete"/>
+                        <attDef ident="notAfter-iso" mode="delete"/>
+                        <attDef ident="notBefore-iso" mode="delete"/>
                         <attDef ident="n" mode="delete"/>
                         <attDef ident="facs" mode="delete"/>
                         <attDef ident="unit" mode="delete"/>
@@ -1418,12 +1424,12 @@
                                     <desc>editorischer Kommentar</desc>
                                 </valItem>
                                 <!-- Header: -->
-                                <valItem ident="remarkResponsibility">
+                                <!--<valItem ident="remarkResponsibility">
                                     <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
-                                </valItem>
-                                <valItem ident="remarkRevisionDTA">
+                                </valItem>-->
+                                <!--<valItem ident="remarkRevisionDTA">
                                     <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
-                                </valItem>
+                                </valItem>-->
                                 <valItem ident="remarkSource">
                                     <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
                                 </valItem>
@@ -2037,7 +2043,7 @@
                         <attDef ident="resp" mode="delete"/>
                     </attList>
                 </elementSpec>
-                <elementSpec ident="author" module="core" mode="change">
+                <!--<elementSpec ident="author" module="core" mode="change">
                     <attList>
                         <attDef ident="cert" mode="delete"/>
                         <attDef ident="corresp" mode="delete"/>
@@ -2054,7 +2060,7 @@
                         <attDef ident="xml:id" mode="delete"/>
                         <attDef ident="xml:lang" mode="delete"/>
                     </attList>
-                </elementSpec>
+                </elementSpec>-->
                 <elementSpec ident="availability" module="header" mode="change">
                     <attList>
                         <attDef ident="facs" mode="delete"/>
@@ -2201,15 +2207,15 @@
                         <attDef ident="resp" mode="delete"/>
                     </attList>
                 </elementSpec>
-                <elementSpec ident="editor" module="core" mode="change">
+                <!--<elementSpec ident="editor" module="core" mode="change">
                     <attList>
                         <attDef ident="corresp" mode="change" usage="opt">
                             <datatype minOccurs="1" maxOccurs="1">
                                 <rng:ref name="teidata.pointer"/>
                             </datatype>
-                            <!--<valList type="closed" mode="replace">
+                            <!-\-<valList type="closed" mode="replace">
                                 <valItem ident="#DTACorpusPublisher"/>
-                            </valList>-->
+                            </valList>-\->
                         </attDef>
                         <attDef ident="role" mode="change" usage="opt">
                             <valList type="closed" mode="replace">
@@ -2229,7 +2235,7 @@
                         <attDef ident="cert" mode="delete"/>
                         <attDef ident="resp" mode="delete"/>
                     </attList>
-                </elementSpec>
+                </elementSpec>-->
                 <elementSpec ident="editorialDecl" module="header" mode="change">
                     <attList>
                         <attDef ident="xml:id" mode="delete"/>
@@ -2462,6 +2468,12 @@
                         <attDef ident="rend" mode="delete"/>
                         <attDef ident="cert" mode="delete"/>
                         <attDef ident="resp" mode="delete"/>
+                        <attDef ident="from-iso" mode="delete"/>
+                        <attDef ident="to-iso" mode="delete"/>
+                        <attDef ident="notAfter-iso" mode="delete"/>
+                        <attDef ident="notBefore-iso" mode="delete"/>
+                        <attDef ident="when-iso" mode="delete"/>
+                        <attDef ident="calendar" mode="delete"/>
                     </attList>
                 </elementSpec>
                 <elementSpec ident="measure" module="textstructure" mode="change">
@@ -2704,10 +2716,20 @@
                         <attDef ident="prev" mode="delete"/>
                         <attDef ident="facs" mode="delete"/>
                         <attDef ident="key" mode="delete"/>
-                        <attDef ident="ref" mode="delete"/>
+                        <attDef ident="ref" mode="change" usage="req">
+                            <valList type="closed" mode="replace">
+                                <valItem ident="http://www.loc.gov/marc/relators/relacode.html"/>
+                            </valList>
+                        </attDef>
                         <attDef ident="when" mode="delete"/>
                         <attDef ident="cert" mode="delete"/>
                         <attDef ident="resp" mode="delete"/>
+                        <attDef ident="to-iso" mode="delete"/>
+                        <attDef ident="when-iso" mode="delete"/>
+                        <attDef ident="notAfter-iso" mode="delete"/>
+                        <attDef ident="notBefore-iso" mode="delete"/>
+                        <attDef ident="from-iso" mode="delete"/>
+                        <attDef ident="calendar" mode="delete"/>
                     </attList>
                 </elementSpec>
                 <elementSpec ident="respStmt" module="core" mode="change">
@@ -2903,6 +2925,12 @@
                         <attDef ident="rend" mode="delete"/>
                         <attDef ident="xml:id" mode="delete"/>
                         <attDef ident="when" mode="delete"/>
+                        <attDef ident="to-iso" mode="delete"/>
+                        <attDef ident="when-iso" mode="delete"/>
+                        <attDef ident="notAfter-iso" mode="delete"/>
+                        <attDef ident="notBefore-iso" mode="delete"/>
+                        <attDef ident="from-iso" mode="delete"/>
+                        <attDef ident="calendar" mode="delete"/>
                     </attList>
                 </elementSpec>
                 <elementSpec ident="titleStmt" module="header" mode="change">
@@ -4696,8 +4724,8 @@
                         <attDef ident="from" mode="delete"/>
                         <attDef ident="loc" mode="delete"/>
                         <attDef ident="n" mode="delete"/>
-                        <attDef ident="next" mode="delete"/>
-                        <attDef ident="prev" mode="delete"/>
+                        <!--<attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>-->
                         <attDef ident="ref" mode="delete"/>
                         <attDef ident="rend" mode="delete"/>
                         <attDef ident="rendition" mode="delete"/>
@@ -4710,7 +4738,7 @@
                         <attDef ident="to" mode="delete"/>
                         <attDef ident="type" mode="delete"/>
                         <attDef ident="xml:base" mode="delete"/>
-                        <attDef ident="xml:id" mode="delete"/>
+<!--                        <attDef ident="xml:id" mode="delete"/>-->
                         <attDef ident="xml:lang" mode="delete"/>
                         <attDef ident="xml:space" mode="delete"/>
                     </attList>
@@ -4755,10 +4783,10 @@
                         <attDef ident="facs" mode="delete"/>
                         <attDef ident="hand" mode="delete"/>
                         <attDef ident="n" mode="delete"/>
-                        <attDef ident="next" mode="delete"/>
-                        <attDef ident="prev" mode="delete"/>
-                        <attDef ident="rend" mode="delete"/>
-                        <attDef ident="rendition" mode="delete"/>
+                        <!--<attDef ident="next" mode="delete"/>-->
+                        <!--<attDef ident="prev" mode="delete"/>-->
+                        <!--<attDef ident="rend" mode="delete"/>-->
+                        <!--<attDef ident="rendition" mode="delete"/>-->
                         <attDef ident="require" mode="delete"/>
                         <attDef ident="resp" mode="delete"/>
                         <attDef ident="sameAs" mode="delete"/>
@@ -4770,8 +4798,8 @@
                         <attDef ident="varSeq" mode="delete"/>
                         <!--<attDef ident="wit" mode="delete"/>-->
                         <attDef ident="xml:base" mode="delete"/>
-                        <attDef ident="xml:id" mode="delete"/>
-                        <attDef ident="xml:lang" mode="delete"/>
+                        <!--<attDef ident="xml:id" mode="delete"/>-->
+                        <!--<attDef ident="xml:lang" mode="delete"/>-->
                         <attDef ident="xml:space" mode="delete"/>
                     </attList>
                 </elementSpec>
@@ -4786,9 +4814,9 @@
                         <attDef ident="facs" mode="delete"/>
                         <attDef ident="key" mode="delete"/>
                         <attDef ident="n" mode="delete"/>
-                        <attDef ident="next" mode="delete"/>
+                        <!--<attDef ident="next" mode="delete"/>-->
                         <attDef ident="nymRef" mode="delete"/>
-                        <attDef ident="prev" mode="delete"/>
+                        <!--<attDef ident="prev" mode="delete"/>-->
                         <!--<attDef ident="ref" mode="delete"/>-->
                         <attDef ident="rend" mode="delete"/>
                         <attDef ident="rendition" mode="delete"/>
@@ -4821,8 +4849,8 @@
                             </valList>
                         </attDef>
                         <attDef ident="xml:base" mode="delete"/>
-                        <attDef ident="xml:id" mode="delete"/>
-                        <attDef ident="xml:lang" mode="delete"/>
+                        <!--<attDef ident="xml:id" mode="delete"/>-->
+                        <!--<attDef ident="xml:lang" mode="delete"/>-->
                         <attDef ident="xml:space" mode="delete"/>
                     </attList>
                 </elementSpec>
