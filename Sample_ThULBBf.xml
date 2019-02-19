@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="ODD/out/ODD_ThULBBf_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="EB_H24_PK16_56">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title>
-                <respStmt>
+                <author>
                     <name type="person" xml:id="EB">
                         <idno type="gnd">139081127</idno>
                         <idno type="viaf">95671766</idno>
                         <idno type="urmel">00013623</idno>
                         <idno type="wikidata">Q323050</idno>
+                        <idno type="urmel">HisBest_person_????????</idno>
                         <surname>Reuß-Ebersdorf</surname>
                         <forename>Erdmuthe Benigna</forename>
                         <nameLink>von</nameLink>
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
                     </name>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
-                        Author
+                </author>
+                <respStmt corresp="#referenceManuscript">
+                    <name type="person" xml:id="H24">
+                        <idno type="gnd">130132365</idno>
+                        <surname>Reuß-Schleiz zu Köstritz</surname>
+                        <forename>Heinrich XXIV.</forename>
+                        <nameLink>von</nameLink>
+                        <roleName>Graf</roleName>
+                    </name>
+                    <resp corresp="#marcRelators">
+                        Addressee
+                    </resp>
+                </respStmt>
+                <respStmt corresp="#referenceManuscript">
+                    <name type="person" xml:id="unknownScribe">
+                        <surname>N.N.</surname>
+                        <forename>N.N</forename>
+                    </name>
+                    <resp corresp="#marcRelators">
+                        Scribe
                     </resp>
                 </respStmt>
                 <respStmt>
@@ -27,8 +46,17 @@
                         <surname>Schmidt-Funke</surname>
                         <forename>Julia A.</forename>
                     </name>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                    <resp corresp="#marcRelators">
                         Editor
+                    </resp>
+                    <resp corresp="#marcRelators">
+                        Transcriber
+                    </resp>
+                    <resp corresp="#marcRelators">
+                        Publisher
+                    </resp>
+                    <resp corresp="#marcRelators">
+                        Project director
                     </resp>
                 </respStmt>
                 <respStmt>
@@ -37,17 +65,20 @@
                         <surname>Prell</surname>
                         <forename>Martin</forename>
                     </name>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                    <resp corresp="#marcRelators">
                         Editor
                     </resp>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
-                        Research team member
+                    <resp corresp="#marcRelators">
+                        Research team head
                     </resp>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                    <resp corresp="#marcRelators">
                         Transcriber
                     </resp>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                    <resp corresp="#marcRelators">
                         Markup Editor
+                    </resp>
+                    <resp corresp="#marcRelators">
+                        Publisher
                     </resp>
                 </respStmt>
                 <respStmt>
@@ -55,11 +86,14 @@
                         <idno type="gnd">5053491-9</idno>
                         Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
                     </name> 
-                    <resp ref="[URL auf UrMEL-Relator-Systematik">
+                    <resp corresp="#urmelRoles">
                         Digitalisierung
                     </resp>
-                    <resp ref="[URL auf UrMEL-Relator-Systematik">
-                        langfristige Bereitstellung
+                    <resp corresp="#marcRelators">
+                        Host institution
+                    </resp>
+                    <resp corresp="#urmelRoles">
+                        Rechteinhaber (Digitale Images)
                     </resp>
                 </respStmt>
                 <respStmt>
@@ -67,7 +101,7 @@
                         <surname>Wolf</surname>
                         <forename>Kerstin</forename>
                     </name>
-                    <resp ref="http://www.loc.gov/marc/relators/relacode.html">
+                    <resp corresp="#marcRelators">
                         Research team member
                     </resp>
                 </respStmt>
@@ -76,29 +110,41 @@
                         <surname>N.N.</surname>
                         <forename>N.N</forename>
                     </name>
-                    <resp ref="[URL auf UrMEL-Relator-Systematik">
+                    <resp corresp="#urmelRoles">
                         Ersttranskription
+                    </resp>
+                </respStmt>
+                <respStmt>
+                    <name type="person" xml:id="H14R">
+                        <surname>Reuß</surname>
+                        <forename>Heinrich XIV.</forename>
+                        <nameLink>von</nameLink>
+                    </name>
+                    <resp corresp="#urmelRoles">
+                        Rechteinhaber (Originalquelle)
                     </resp>
                 </respStmt>
             </titleStmt>
             <editionStmt>
                 <edition>
-                    <note type="typeSourceEdition">Diplomatische Ausgabe</note>
-                    <note type="typeSourceEdition">Kritische Ausgabe</note>
-                    <note type="typeSourceEdition">Kommentierte Ausgabe</note>
+                    <note type="typeSourceEdition">Historisch-Kritische Ausgabe</note>
+                    <note type="typeSourceEdition">Faksimileausgabe</note>
                     <note type="completenessDigitization">vollständig digitalisierte Textausgabe</note>
                     <note type="completenessTranscription">vollständig transkribierte Textausgabe</note>
                 </edition>
             </editionStmt>
             <extent>
-                <measure type="images">10</measure><!-- muss aus ThULB-Derivat automatisch bezogen werden -->
+                <measure type="images">10</measure><!-- sollte aus ThULB-Derivat automatisch bezogen werden -->
             </extent>
             <publicationStmt>
                 <publisher>
-                    <name type="organisation" role="hostingInstitution">
+                    <name type="organisation" role="hostingInstitution"><!-- verpflichtend, wird aus respStmt übernommen, xml:id entfernt und @role="hostingInstitution" übernommen -->
                         <idno type="gnd">5053491-9</idno>
-                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)</name>
-                    <name type="project">Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)</name><!-- Projektname muss in UrMEL zuvor angelegt worden sein -->
+                        Thüringer Universitäts- und Landesbibliothek Jena (ThULB)
+                    </name>
+                    <name type="organisation" role="project"><!-- verpflichtend, Projektname muss in UrMEL zuvor angelegt worden und auswählbar sein; wird aus seriesStmt/title (s.u.) übernommen; Elementname wird von title zu name geändert, aus @type wird @role -->
+                        Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)
+                    </name>
                 </publisher>
                 <pubPlace>
                     <idno type="gnd">4028557-1</idno>
@@ -106,9 +152,23 @@
                     Jena
                 </pubPlace>
                 <date type="publication" when-iso="2017-02-28">28. Februar 2017</date>
-                <availability>
-                    <licence target="https://creativecommons.org/licenses/by-sa/4.0/">
-                        <p>CC BY 4.0(Namensnennung 4.0)</p>
+                <availability xml:id="availability-publication"><!-- Lizenz der Publikation (Text- und Bildausgabe) -->
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.de">
+                        <p>Namensnennung-Nicht kommerziell-Share Alike 4.0 International (CC BY-NC-SA 4.0)</p></licence>
+                </availability>
+                <availability xml:id="availability-referenceManuscript" corresp="#referenceManuscript"><!-- Lizenz der als Vorlage dienenden Leit-Bild- oder Textquelle -->
+                    <licence>
+                        <p>Alle Rechte vorbehalten. Die Quelle ist Eigentum des Fürsten Heinrich XIV. Reuß.</p>
+                    </licence>
+                </availability>
+                <availability xml:id="availability-quelle2" corresp="#PK16_56B"> <!-- Lizenz einer weiteren hier edierten, als Vorlage dienenden Text-/Bildquelle -->
+                    <licence>
+                        <p>Alle Rechte vorbehalten. Die Quelle befindet sich im Archiv der Brüdergmeine Ebersdorf.</p>
+                    </licence>
+                </availability>
+                <availability xml:id="availability-quelle3" corresp="#PK16_56C"> <!--  Lizenz einer weiteren, hier edierten, als Vorlage dienenden Text-/Bildquelle -->
+                    <licence>
+                        <p>Alle Rechte vorbehalten. Die Quelle befindet sich im Hausarchiv Köstritz des Staatsarchivs Greiz.</p>
                     </licence>
                 </availability>
                 <idno>
@@ -120,7 +180,7 @@
             </publicationStmt>
             <seriesStmt>
                 <title type="project">Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732)</title>
-                <biblScope unit="chapter">Nachlässe » Nachlass Erdmuthe Benigna von Reuß-Ebersdorf, geb. v. Solms-Laubach (1670-1732) » Briefe » von Erdmuthe Benigna von Reuß-Ebersdorf » an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (1681-1748)</biblScope>
+                <biblScope unit="part">UrMEL/Collections/Nachlässe/Nachlass Erdmuthe Benigna von Reuß-Ebersdorf, geb. v. Solms-Laubach (1670-1732)/Briefe/von Erdmuthe Benigna von Reuß-Ebersdorf/an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (1681-1748)</biblScope>
             </seriesStmt>
             <notesStmt>
                 <note type="remarkDocument">[Zusatzinformationen zur Textausgabe]</note>
@@ -133,11 +193,11 @@
             </notesStmt>
             <sourceDesc>
                 <bibl type="MAN">Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz, Gera, 17. November 1712 und Ebersdorf, Dezember 1712, fol. 56r-60v. Brief-URN: http://nbn-resolving.de/urn/resolver.pl?urn=urn:nbn:de:urmel-35c6148e-3d42-4b26-a4a0-0bb8da46018d6 (Zugriff: 28.02.2017). In: Martin Prell u. Julia Schmidt-Funke (Hg.): Digitale Edition der Briefe Erdmuthe Benignas von Reuß-Ebersdorf (1670-1732). Jena 2017 [Work in Progress]. URL: http://erdmuthe.thulb.uni-jena.de.
-                </bibl><!-- MAN wird bei Auswahl der Handschriften-Erfassungsmaske automatisch angelegt -->
+                </bibl><!-- Zitiertitel; MAN (Handschrift) bzw. TYP (Typoskript) muss in Erfassungsmaske auswählbar sein -->
                 <biblFull>
                     <titleStmt>
-                        <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title><!-- aus fileDesc/titleStmt/title[@type="main"] bezogen -->
-                        <respStmt>
+                        <title type="main">Brief von Erdmuthe Benigna von Reuß-Ebersdorf an Heinrich XXIV. von Reuß-Schleiz zu Köstritz (Gera, 17. November 1712 und Ebersdorf, Dezember 1712)</title><!-- wird aus fileDesc/titleStmt/title[@type="main"] bezogen -->
+                        <author>
                             <name type="person">
                                 <idno type="gnd">139081127</idno>
                                 <idno type="viaf">95671766</idno>
@@ -149,10 +209,7 @@
                                 <addName>E. B. G. R.</addName>
                                 <roleName>Gräfin</roleName>
                             </name>
-                            <resp ref="http://www.loc.gov/marc/relators/relacode.html">
-                                Author
-                            </resp>
-                        </respStmt><!-- aus filesDesc/titleStmt/author ohne @xml:id bezogen -->
+                        </author><!-- wird aus filesDesc/titleStmt/author ohne @xml:id bezogen -->
                     </titleStmt>
                     <extent>
                         <measure type="pages">5</measure>
@@ -163,11 +220,11 @@
                             <idno type="gnd">4823248-8</idno>
                             <idno type="geonames">2933921</idno>
                             Ebersdorf (Thüringen)
-                            <note resp="#MP">Der Ausstellungsort ist in der Quelle zwar unter einer anderen Schreibweise angegeben, er entspricht aber mit hoher Wahrscheinlichkeit dem identifizierten Ort. Von diesem aus wurde auch die Mehrzahl der übrigen Briefe der Gräfin verschickt.</note>
+                            <note type="remarkPubPlace" resp="#MP">Der Ausstellungsort ist in der Quelle zwar unter einer anderen Schreibweise angegeben, er entspricht aber mit hoher Wahrscheinlichkeit dem identifizierten Ort. Von diesem aus wurde auch die Mehrzahl der übrigen Briefe der Gräfin verschickt.</note>
                         </pubPlace>
-                        <date type="creation" calendar="gregorian" when-iso="1712-11-17" cert="high">17. Dezember 1712
-                            <note type="remarkDate" resp="#MP">Der Brief wurde über einen längeren Zeitraum hinweg geschrieben. Neben dem 17.11.1712 ist im Brief auch das Datum Dezember 1712 zu finden</note>
-                            <note type="alternativeDating" resp="#MP">Julianischer Kalender: 6. November 1712</note>
+                        <date type="creation" calendar="gregorian" from-iso="1712-11-17" to-iso="1712-12" evidence="assured" resp="#MP">17. Dezember 1712 <!--hier kein @cert, da durch @evidence abgedeckt -->
+                            <note type="remarkDate" resp="#MP">Der Brief wurde über einen längeren Zeitraum hinweg geschrieben. Neben dem 17.11.1712 ist im Brief auch das Datum Dezember 1712 zu finden. Der Monat Dezember kann nicht mit Sicherheit bestimmt werden.</note>
+                            <note type="alternativeDating" resp="#MP">Nach julianischem Kalender: 6. November 1712</note>
                         </date>
                     </publicationStmt>
                     <seriesStmt>
@@ -175,10 +232,10 @@
                         <biblScope unit="pages">56r-60v</biblScope>
                     </seriesStmt>
                     <notesStmt>
-                        <note type="remarkSource">Es existieren keine weiteren Abschriften der Quelle. Der Brief ist über einen längeren Zeitraum hinweg verfasst worden. Als einer der wenigen Briefe der Edition hat er eine vollständiges Datierung durch die Schreiberin erhalten. Der Brief wird zwar im Thüringischen Staatsarchiv Greiz aufbewahrt (Depositum), befindet sich aber in Besitz des Fürsten Reuß Heinrich XIV.</note>
+                        <note type="remarkSource">Es existieren zwei weitere Abschriften der Quelle, die ebenfalls ediert worden. Der Brief ist über einen längeren Zeitraum hinweg verfasst worden. Als einer der wenigen Briefe der Edition hat er eine vollständiges Datierung durch die Schreiberin erhalten. Der Brief wird zwar im Thüringischen Staatsarchiv Greiz aufbewahrt (Depositum), befindet sich aber im Eigentum des Fürsten Reuß Heinrich XIV.</note>
                     </notesStmt>
                 </biblFull>
-                <msDesc rend="engrossedCopy" xml:id="referenceManuscript">
+                <msDesc rend="engrossedCopy" xml:id="referenceManuscript" corresp="#availability-referenceManuscript">
                     <msIdentifier>
                         <repository ref="http://d-nb.info/gnd/1119456932">
                             Landesarchiv Thüringen - Staatsarchiv Greiz
@@ -192,7 +249,8 @@
                     </msIdentifier>
                     <msContents>
                         <summary>
-                            <p>Der Brief behandelt folgende Themenkomplexe: Differenzen mit Lobenstein um die Teilung der Herrschaft Hirschberg, Differenzen mit Hirschbergern und militärisches Eingreifen, Lobensteiner Seniorat und Direktorium, Nachfolge Superintendent, Geschlechtstag in Gera, Reform-/Autonomieabsichten Erdmuthes (eigenes Votum und Inspektionsamt), Mitvormundschaft Carl Ottos von Solms-Laubach-Utphe, Entbindung Marie Eleonore Emilies Reuß-Köstritz</p>
+                            <p xml:lang="deu">Der Brief behandelt folgende Themenkomplexe: Differenzen mit Lobenstein um die Teilung der Herrschaft Hirschberg, Differenzen mit Hirschbergern und militärisches Eingreifen, Lobensteiner Seniorat und Direktorium, Nachfolge Superintendent, Geschlechtstag in Gera, Reform-/Autonomieabsichten Erdmuthes (eigenes Votum und Inspektionsamt), Mitvormundschaft Carl Ottos von Solms-Laubach-Utphe, Entbindung Marie Eleonore Emilies Reuß-Köstritz</p>
+                            <p xml:lang="eng">The letter concerns the following topics: differences with Lobenstein because of the division of the dominion Hirschberg ...</p>
                             <listPerson type="mentioned">
                                 <person>
                                     <name type="person">
@@ -253,19 +311,16 @@
                             <supportDesc>
                                 <support>
                                     <material>Papier</material>
-                                    <watermark>Ochsenkopf - Mit Augen - Darüber einkonturige Stange - Darüber Blume - Ohne Beizeichen
-                                        <ref target="URL">https://www.wasserzeichen-online.de/?ref=DE4620-PO-65706</ref>
-                                    </watermark>
-                                    <stamp>Keine Stempel</stamp>
-                                </support>
-                                <extent>
-                                    <measure type="pages">5</measure><!--aus biblFull/extent zu beziehen-->
                                     <dimensions type="leaf">
                                         <height unit="mm">178</height>
                                         <width unit="mm">260</width>
                                         <dim>Quartformat</dim>
                                     </dimensions>
-                                </extent>
+                                    <watermark>Ochsenkopf - Mit Augen - Darüber einkonturige Stange - Darüber Blume - Ohne Beizeichen
+                                        <ref target="URL">https://www.wasserzeichen-online.de/?ref=DE4620-PO-65706</ref>
+                                    </watermark>
+                                    <stamp>Keine Stempel</stamp>
+                                </support>
                                 <foliation>
                                     <p>moderne Foliierung mit Bleistift am oberen rechten Blattrand</p>
                                 </foliation>
@@ -284,14 +339,14 @@
                                 </layout>
                             </layoutDesc>
                         </objectDesc>
-                        <handDesc>
-                            <handNote xml:id="erdmuthe_benigna_hand" scope="major" medium="black_ink" scribe="author">Hand der Verfasserin Erdmuthe Benigna v Reuß-Ebersdorf, schwarze Tinte, in Kurrent-Schrift</handNote>
-                            <handNote xml:id="heinrich_xxiv_hand" scope="minor" medium="red_pencil" scribe="addressee">Hand des Adressaten Heinrich XXIV., roter Buntstift, in lateinischer Schrift</handNote>
+                        <handDesc><!--ist frewillig für XML-edierende; wird nicht in FuD oder Nachlass-Erfassungsmaske auftreten -->
+                            <handNote corresp="#EB" scope="major" medium="black_ink">Hand der Verfasserin Erdmuthe Benigna v Reuß-Ebersdorf, schwarze Tinte, in Kurrent-Schrift</handNote>
+                            <handNote corresp="#unknownScribe" scope="minor" medium="black_ink">Hand eines unbekannten Schreibers, schwarze Tinte, in Kurrent-Schrift</handNote>
+                            <handNote corresp="#H24" scope="minor" medium="red_pencil" scribe="addressee">Hand des Adressaten Heinrich XXIV., roter Buntstift, in lateinischer Schrift</handNote>
                         </handDesc>
                         <scriptDesc>
-                            <scriptNote scope="major" script="Latf" scriptRef="http://www.unicode.org/iso15924/">überwiegend Kurrentschrift</scriptNote>
-                            <scriptNote>
-                                <p>Die Hauptschrift ist sehr weitgezogen ausgeführt. Es treten auch Antiquabuchstaben auf, allerdings häufig vermischt mit kurrenten Buchstaben.</p>
+                            <summary>Die Hauptschrift ist sehr weitgezogen ausgeführt. Es treten auch Antiquabuchstaben auf, allerdings häufig vermischt mit kurrenten Buchstaben.</summary>
+                            <scriptNote scope="major" script="Latf" corresp="#iso15924">Überwiegend Kurrentschrift
                             </scriptNote>
                         </scriptDesc>
                         <decoDesc>
@@ -328,13 +383,12 @@
                     </additional>
                 </msDesc>
                 <listWit>
-                    <witness xml:id="PK16_56A" corresp="#referenceManuscript"/>
-                    <witness xml:id="PK16_56B" rend="concept">
-                        Der Entwurf des ausgefertigten Briefes befindet sich im Hausarchiv Ebersdorf ...
+                    <witness xml:id="PK16_56B" rend="concept" corresp="#availability-quelle2">
+                        Der Entwurf des ausgefertigten Briefes befindet sich im Archiv der Brüdergemeine Ebersdorf.
                         <ref target="http://www.URLausgedacht1.de"/>
                     </witness>
-                    <witness xml:id="PK16_56C" rend="copy">
-                        Eine Kopie des ausgefertigten Briefes befindet sich im Hausarchiv Köstritz ...
+                    <witness xml:id="PK16_56C" rend="copy" corresp="#availability-quelle3">
+                        Eine Kopie des ausgefertigten Briefes befindet sich im Hausarchiv Köstritz des Staatsarchivs Greiz.
                         <ref target="http://www.URLausgedacht2.de"/>
                     </witness>
                 </listWit>
@@ -351,14 +405,114 @@
                 <punctuation marks="some">
                     <p>Die Interpunktion wurde überwiegend übernommen</p>
                 </punctuation>
-                <p>Die Transkription und Auszeichnungstiefe erfolgte nach den unter <ref target="xxx">[URL zum TEI-DOkument mit den Transkriptionsrichtlinien, bspw. denen des Editionsportals Thüringen bzw. projekteigenen]</ref> formulierten Richtlinien.</p>
+                <ab type="closenessToSource">
+                    Angaben zum editorischen Umgang mit einzelnen Textphänomenen in der Vorlage:
+                    <!--primär-->
+                    <note type="DealingWithMisspelling" subtype="accordingToSource">
+                        Schreibfehler wie Vorlage</note>
+                    <note type="DealingWithHistoricalSpelling" subtype="accordingToSource">
+                        Historische Schreibweise wie Vorlage </note>
+                    <note type="DealingWithAbbreviations" subtype="accordingToSource">Abkürzungen wie Vorlage</note>
+                    <note type="DealingWithPunctuation" subtype="accordingToSource">Interpunktion wie Vorlage</note>
+                    <note type="DealingWithCaseSensitivity" subtype="accordingToSource">Groß- und Kleinschreibung wie Vorlage</note>
+                    <note type="DealingWithSeparateAndCompoundSpelling" subtype="accordingToSource">Getrennt- und Zusammenschreibung wie Vorlage
+                    </note>
+                    <note type="DealingWithHighlightings" subtype="accordingToSource">Hervorhebungen wie Vorlage</note>
+                    <note type="DealingWithLinebreaks" subtype="marked">Zeilenwechsel markiert</note>
+                    <note type="DealingWithPagebreaks" subtype="marked">Seitenwechsel markiert</note>
+                    <note type="DealingWithHyphenation" subtype="accordingToSource">Silbentrennung wie Vorlage</note>
+                    <note type="DealingWithConsonantAccumulation" subtype="accordingToSource">Konsonantendopplung wie Vorlage</note>
+                    <note type="DealingWithWhitespaces" subtype="recorded">
+                        Leerzeichen dokumentiert
+                    </note>
+                    <note type="DealingWithTextGenesis" subtype="recorded">
+                        textgenetische Informationen dokumentiert
+                    </note>
+                    <note type="DealingWithTextLoss" subtype="recorded">
+                        Textverlust dokumentiert
+                    </note>
+                    <note type="DealingWithLongS" subtype="accordingToSource">lang-s wie Vorlage</note>
+                    <note type="DealingWithStylisticCorrections" subtype="marked">
+                        Stilistische Korrekturen markiert
+                    </note>
+                    <note type="DealingWithSuppliedText" subtype="marked">
+                        Ergänzter Text markiert
+                    </note>
+                    <note type="DealingWithPositioning" subtype="recorded">
+                        topografischer Textbefund wiedergegeben
+                    </note>
+                    
+                    <!--sekundär-->
+                    <note type="DealingWithPaperSheetSignature" subtype="recorded">
+                        Blattsignatur wiedergegeben
+                    </note>
+                    <note type="DealingWithAbbreviationOverline" subtype="recorded">Kürzungsstriche dokumentiert</note>
+                    <note type="DealingWithCharactersIAndJ" subtype="PhoneticValueTranscribed">
+                        Buchstaben i und j nach phonetischem Laut transkribiert
+                    </note>
+                    <note type="DealingWithCharactersUAndV" subtype="accordingToSource">
+                        Buchstaben u und v wie Vorlage
+                    </note>
+                    <note type="DealingWithCharactersCAndT" subtype="accordingToSource">Buchstaben c und t wie Vorlage</note>
+                    <note type="DealingWithCharactersSZAndß" subtype="PhoneticValueTranscribed">Buchstaben sz und ß nach phonetischem Wert</note>
+                    <!--usw.-->
+                </ab>
+                <ab type="degreeOfExploration"><!--bzw degreeOfDevelopment-->
+                    Angaben zur Erschließungstiefe der Vorlage durch die Transkription:
+                    <note type="misspelling"  subtype="marked">
+                        Schreibfehler markiert
+                    </note>
+                    <note type="abbreviations" subtype="markedAndExpanded">
+                        Abkürzungen markiert und aufgelöst
+                    </note>
+                    <note type="contentErrors" subtype="unmarked">
+                        Inhaltliche Fehler nicht markiert
+                    </note>
+                    <note type="persons" subtype="markedAndIdentified">
+                        Personen markiert und identifiziert
+                    </note>
+                    <note type="geographicalTerms" subtype="markedAndIdentified">
+                        Geographica markiert und identifiziert
+                    </note>
+                    <note type="organisations" subtype="markedAndIdentified">
+                        Organisationen/Institutionen markiert und identifiziert
+                    </note>
+                    <note type="bibliographicalData" subtype="markedAndIdentified">
+                        Bibliographische Angaben markiert und identifiziert
+                    </note>
+                    <note type="datings" subtype="markedAndNormalized">
+                        Datierungen markiert und normalisiert
+                    </note>
+                    <note type="directQuotations" subtype=" markedAndIdentified">
+                        Direkte Zitate markiert und identifiziert
+                    </note>
+                    <note type="indirectQuotations" subtype="unmarked">
+                        indirekte Zitate nicht markiert
+                    </note>
+                    <note type="foreignTerms" subtype="markedAndTranslated">
+                        Fremdsprachliche Begriffe markiert und übersetzt
+                    </note>
+                    <note type="UnknowUnusedAndRegionalTermsAndIdioms" subtype="markedAndExplained">
+                        Unbekannte, ungebräuchliche und regionale Begriffe und Idiome markiert und erklärt
+                    </note>
+                    <note type="factsAndEvents" subtype="unmarked">
+                        Ereignisse nicht markiert
+                    </note>
+                    <note type="editorialResponsibilities" subtype="marked">
+                        editorische Verantwortlichkeiten markiert
+                    </note>
+                </ab>
+                <p>[weitere Angaben zu den Transkriptions- und Annotationsprinzipien]</p>
+                <p>[Dokumentation, wo vom DTABf abgewichen wird; muss vorausgefüllt werden!]</p>
+                <p>[Dokumentation, wo vom ThULBBf abgewichen wird; für XML-Edierende]</p>
             </editorialDecl>
             <tagsDecl>
                 <rendition scheme="css" xml:id="rendition-aq">font-family:sans-serif</rendition>
                 <rendition scheme="css" xml:id="rendition-b">font-weight:bold</rendition>
-                <rendition scheme="css" xml:id="rendition-blue">color:blue</rendition>
                 <rendition scheme="css" xml:id="rendition-c"
                     >display:block; text-align:center</rendition>
+                <rendition scheme="css" xml:id="rendition-color"
+                    >Farbe entsprechend auf color folgendem Hexadezimal-Farbcode</rendition>
                 <rendition scheme="css" xml:id="rendition-et"
                     >display:block; margin-left:2em; text-indent:0</rendition>
                 <rendition scheme="css" xml:id="rendition-et2"
@@ -368,11 +522,11 @@
                 <rendition scheme="css" xml:id="rendition-f">border:1px dotted silver</rendition>
                 <rendition scheme="css" xml:id="rendition-fr">border:1px dotted silver</rendition>
                 <rendition scheme="css" xml:id="rendition-g">letter-spacing:0.125em</rendition>
-                <rendition scheme="css" xml:id="rendition-i">font-style:italic</rendition>
                 <rendition scheme="css" xml:id="rendition-in">font-size:150%</rendition>
                 <rendition scheme="css" xml:id="rendition-k">font-variant:small-caps</rendition>
                 <rendition scheme="css" xml:id="rendition-larger">font-size:larger</rendition>
-                <rendition scheme="css" xml:id="rendition-red">color:red</rendition>
+                <rendition scheme="css" xml:id="rendition-mMM">[noch zu definieren; Vorschlag:]border-left: 1px solid #000; margin-left: -0.5em; padding-left: 0.5em;[entspr. humboldt digital]
+                </rendition>
                 <rendition scheme="css" xml:id="rendition-right"
                     >display:block; text-align:right</rendition>
                 <rendition scheme="css" xml:id="rendition-s"
@@ -385,16 +539,39 @@
                 <rendition scheme="css" xml:id="rendition-u">text-decoration:underline</rendition>
                 <rendition scheme="css" xml:id="rendition-uu"
                     >border-bottom:double 3px #000</rendition>
+                <rendition scheme="css" xml:id="rendition-ud">[noch zu definieren; Vorschlag:]rotate(-180deg)
+                </rendition>
             </tagsDecl>
             <classDecl>
+                <taxonomy xml:id="urmelRoles" >
+                    <bibl>Rollenliste in UrMEL/ThULB
+                        <ref target="http://www.urmel-dl.de/"/><!--UrMEL-Rollenliste benötigt stabilen Link-->
+                    </bibl>
+                </taxonomy>
+                <taxonomy xml:id="marcRelators" >
+                    <bibl>MARC Code List for Relators
+                        <ref target="http://www.loc.gov/marc/relators/relacode.html"/>
+                    </bibl>
+                </taxonomy>
+                <taxonomy xml:id="iso639-3" >
+                    <bibl>ISO-639-3-Codes for the Representation of Names of Languages</bibl>
+                </taxonomy>
+                <taxonomy xml:id="iso15924">
+                    <bibl>ISO-15924-Codes for the Representation of Names of Scripts</bibl>
+                </taxonomy>
                 <taxonomy xml:id="thulbntb">
-                    <bibl>ThULB Notification of Thüringian Bibliography</bibl>
+                    <bibl>ThULB Notification of Thüringian Bibliography
+                        <ref target="http://www.urmel-dl.de/"/><!-- benötigt noch stabilen Link -->
+                    </bibl>
                 </taxonomy>
                 <taxonomy xml:id="thulbctg">
-                    <bibl>ThULB Classification of Text Genre</bibl>
+                    <bibl>ThULB Classification of Text Genre
+                        <ref target="http://www.urmel-dl.de/"/><!-- noch geeigneten Normdatensatz recherchieren -->
+                    </bibl>
                 </taxonomy>
                 <taxonomy xml:id="thulbchs">
-                    <bibl>ThULB Classification of Historical Systematic</bibl>
+                    <bibl>ThULB Classification of Historical Systematic
+                        <ref target="http://www.urmel-dl.de/"/><!-- benötigt noch stabilen Link --></bibl>
                 </taxonomy>
                 <taxonomy xml:id="ddc">
                     <bibl>Dewey Decimal Classification</bibl>
@@ -411,29 +588,29 @@
             </classDecl>
         </encodingDesc>
         <profileDesc>
-            <langUsage>
+            <langUsage corresp="#iso639-3">
                 <language ident="deu">Deutsch</language>
                 <language ident="lat">Latein</language>
                 <language ident="fra">Französisch</language>
             </langUsage>
             <textClass>
-                <classCode scheme="#ddc" >
-                    <term>836 Deutsche Briefe</term>
-                    <term>274 Geschichte des Christentums in Europa</term>
+                <classCode scheme="#ddc">
+                    <term key="836">Deutsche Briefe</term>
+                    <term key="274">Geschichte des Christentums in Europa</term>
                 </classCode>
                 <classCode scheme="#gnd">
-                    <term ref="4114558-6">
+                    <term key="4114558-6">
                         Meinungsverschiedenheit
                     </term>
-                    <term ref="4142472-4">
+                    <term key="4142472-4">
                         Angriff
                     </term>
-                    <term ref="4115716-3">
+                    <term key="4115716-3">
                         Reform</term>
-                    <term ref="4019589-2">
+                    <term key="4019589-2">
                         Geburt
                     </term>
-                    <term ref="4046049-6">
+                    <term key="4046049-6">
                         Pietismus
                     </term>
                 </classCode>
@@ -441,16 +618,16 @@
                     <term>Brief</term>
                 </classCode>
                 <classCode scheme="#thuringianReference">
-                    <term type="extrinsic">entstehungs-/sammlungsbezogen, institutionell oder administrativ-editorisch</term>
-                    <term type="intrinsic">inhaltlich/sachlich</term>
+                    <term>entstehungs-/sammlungsbezogen, institutionell oder administrativ-editorisch</term>
+                    <term>inhaltlich/sachlich</term>
                 </classCode>
                 <classCode scheme="#thulbntb">
-                    <term>242050 (Herren, Grafen, Fürsten Reuß)</term>
-                    <term>242010 (Geschichte Neuzeit: Allgemeines &gt;Thüringen&lt;)</term>
-                    <term>614000 (Kirchengeschichte &gt;Thüringen&lt;)</term>
+                    <term key="242050">Herren, Grafen, Fürsten Reuß</term>
+                    <term key="242010">Geschichte Neuzeit: Allgemeines &gt;Thüringen&lt;</term>
+                    <term key="614000">Kirchengeschichte &gt;Thüringen&lt;</term>
                 </classCode>
                 <classCode scheme="#thulbchs">
-                    <term>18. Jahrhundert]</term>
+                    <term>18. Jahrhundert</term>
                 </classCode>
                 <keywords scheme="#projectTopics">
                     <term>Differenzen mit Reuß-Lobenstein</term>
@@ -460,7 +637,7 @@
                     <term>Stellenbesetzungen und Personalangelegenheiten</term>
                 </keywords>
             </textClass>
-            <correspDesc>
+            <!--<correspDesc><!-\-Korrespondenzspezifisch; für XML-Edierende zulässig-\->
                 <correspAction type="sent">
                     <name type="person">
                         <idno type="gnd">139081127</idno>
@@ -473,7 +650,7 @@
                         <addName>E. B. G. R.</addName>
                         <roleName>Gräfin</roleName>
                     </name>
-                    <name type="person">
+                    <name type="place">
                         <idno type="gnd">4823248-8</idno>
                         <idno type="geonames">2933921</idno>
                         Ebersdorf
@@ -489,7 +666,7 @@
                         <nameLink>von</nameLink>
                         <roleName>Graf</roleName>
                     </name>
-                    <name type="person" cert="high">
+                    <name type="place" cert="high">
                         <idno type="gnd">4320217-2</idno>
                         Köstritz
                     </name>
@@ -506,7 +683,7 @@
                         <note>Brief ist zwar bekannt aber nicht erhalten</note>
                     </ref>
                 </correspContext>
-            </correspDesc>
+            </correspDesc>-->
         </profileDesc>
         <revisionDesc>
             <change when-iso="2016-06-15T14:13:18.893Z" who="#MP">
@@ -518,10 +695,109 @@
         </revisionDesc>
     </teiHeader>
     <text>
-        <body>
-            <p>
-                
-            </p>
+        <body><!-- TEI-Instanz umfasst derzeit noch mehrere Briefseiten; entsprechend fallen die <pb> später raus -->
+            <pb facs="PK15_56_0001.tif" n="56r"/>
+            <div type="letter">
+                <fw type="folNum" place="top">56</fw>
+                <opener>
+                    <dateline rendition="#right"><name type="place" ref="http://www.geonames.org/2933921/ebersdorf.html" corresp="#ebersdorf" resp="#MP">Eber&#x017F;torf</name> <hi rendition="#aq"><choice><abbr>d</abbr><expan resp="#MP">den</expan></choice></hi> <date when-iso="1717-10-08">8<lb/>
+                        <hi rendition="#aq">ocktober</hi><lb/>
+                        1717</date>
+                    </dateline><lb/>
+                    <salute>
+                        <choice><orig>aller lieb&#x017F;ter</orig><reg resp="#MP">allerlieb&#x017F;ter</reg></choice> <choice><abbr>H</abbr><expan resp="#MP">Herr</expan></choice> <rs type="person" ref="http://d-nb.info/gnd/130132365" corresp="#heinrichxxiv_koestritz" resp="#MP">vetter</rs>
+                    </salute>
+                </opener><lb/>
+                <space dim="vertical" unit="lines" quantity="1"/>
+                <p><choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> werden d<subst><del rendition="#ow">ie</del><add place="across">a&#x017F;</add></subst> <choice><orig>ver enderde</orig><reg resp="#MP">verenderde</reg></choice> <rs type="place" ref="http://www.geonames.org/2933921/ebersdorf.html" corresp="#ebersdorf" resp="#MP">Eber&#x017F;torfi&#x017F;che</rs><lb/>
+                    <hi rendition="#aq"><foreign xml:lang="lat">vodum</foreign></hi> nach dero <choice><orig>ver langen</orig><reg resp="#MP">verlangen</reg></choice> <choice><orig>ein ge richtet</orig><reg resp="#MP">eingerichtet</reg></choice><lb/>
+                    <choice><orig>hir b<choice><unclear reason="illegible" cert="high" resp="#MP">e</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>&#x00FF;</orig><reg resp="#MP">hirbe&#x00FF;</reg></choice> wider Zu empfangen haben,<lb/>
+                    mir i&#x017F;t lieb d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> &#x017F;ich <choice><orig>ge fallen</orig><reg resp="#MP">gefallen</reg></choice> laße<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    waß wegen deß <choice><orig>danck fe&#x017F;tes</orig><reg resp="#MP">danckfe&#x017F;tes</reg></choice> von hir auß<lb/>
+                    <choice><orig>ge &#x017F;chehen</orig><reg resp="#MP">ge&#x017F;chehen</reg></choice> i&#x017F;t, d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß aber <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> <choice><orig>ver meinen</orig><reg resp="#MP">vermeinen</reg></choice><add rendition="#v" place="left"><metamark function="insert" rend="&#x0394;"/> <choice><orig>ob &#x017F;chon</orig><reg resp="#MP">ob&#x017F;chon</reg></choice> &#x017F;ie weil es nuhn <choice><orig>ge &#x017F;chehen</orig><reg resp="#MP">ge&#x017F;chehen</reg></choice> endlich auch<lb/>
+                        damit <choice><orig>Zu friden</orig><reg resp="#MP">Zufriden</reg></choice> wöre<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice></add><lb/>
+                    <hi rendition="#mMM #color(#123456)" resp="#H24" cert="high">daß es <choice><orig>ge nug</orig><reg resp="#MP">genug</reg></choice> <choice><orig>da mit</orig><reg resp="#MP">damit</reg></choice> <choice><orig>ge we&#x017F;t</orig><reg resp="#MP">gewe&#x017F;t</reg></choice> wöre, <del rendition="#s">wan&#x02F7;</del><lb/>
+                        daß mann deß <name type="person" ref="http://d-nb.info/gnd/143962124" corresp="#christian_koerber" resp="#MP">körbers</name> <choice><orig>ver <sic>ordnugen</sic></orig><reg resp="#MP">verordnugen</reg></choice> <choice><orig>Zer &#x017F;chnitt&#x02F7;</orig><reg resp="#MP">Zer&#x017F;chnitten</reg></choice><lb/>
+                        und mit <hi rendition="#aq">prodestation</hi> wider <choice><orig>Zu rick</orig><reg resp="#MP">Zurick</reg></choice> <choice><orig>ge</orig><reg resp="#MP">ge-</reg></choice></hi><lb/>
+                    &#x017F;chikt,<note type="editorial" resp="#MP">Vgl. hierzu auch den vorhergehenden (undatierten) <ref target="http://nbn-resolving.de/urn/resolver.pl?urn=urn:nbn:de:urmel-fdc0319d-083f-45cb-a2e8-c57f0940b3541">Brief Erdmuthe Benignas an Heinrich XXIV.</ref></note> halte ich aber alleine nicht vor gantz<lb/>
+                    <choice><orig>hin lenglich</orig><reg resp="#MP">hinlenglich</reg></choice>, dann wann mann, doch daß<lb/>
+                    <choice><orig>danck fe&#x017F;t</orig><reg resp="#MP">danckfe&#x017F;t</reg></choice> auf die <choice><orig>ver <sic>ordnug</sic></orig><reg resp="#MP">verordnug</reg></choice> &#x017F;o hir hätte<lb/>
+                    halten laßen, hätten &#x017F;ie doch Einen <hi rendition="#aq"><foreign xml:lang="lat">actum</foreign><lb/>
+                        <choice><unclear reason="illegible" cert="high" resp="#MP">B</unclear><unclear reason="illegible" cert="low" resp="#MP">pr</unclear></choice>osesorium</hi><note resp="#MP" type="editorial">Actus Possessorius: Rechtliche Tat oder Handlung, mit der jemand den Besitz eine Sache behauptet. Vgl. <bibl corresp="#schweser_handlexikon"><ref target=" http://www.mdz-nbn-resolving.de/urn/resolver.pl?urn=urn:nbn:de:bvb:12-bsb10584730-4">Schweser, Handlexikon</ref></bibl>, 8.</note> in <choice><orig>Zu kunft</orig><reg resp="#MP">Zukunft</reg></choice> könen <choice><orig>vor &#x017F;chitzen</orig><reg resp="#MP">vor&#x017F;chitzen</reg></choice><lb/>
+                    und hätten es kinftich im&#x0305;er &#x017F;o <hi rendition="#aq">probirt</hi>,<lb/>
+                    unßeres <hi rendition="#aq">prodestiren</hi> <choice><orig>un ge achtet</orig><reg resp="#MP">ungeachtet</reg></choice>, &#x017F;o muß es<lb/>
+                    endlich Zur &#x017F;prache kom&#x0305;en, und wird &#x017F;ich<lb/>
+                    nuhn be&#x00FF;m&#x0305; <hi rendition="#aq"><foreign xml:lang="lat">iubileum</foreign></hi> er&#x017F;t recht Zeichen<lb/>
+                    es muß doch bichen<note type="editorial" resp="#MP">Meint: biegen.</note> oder brechen, &#x017F;o kan<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    man <choice><orig>ein mahl</orig><reg resp="#MP">einmahl</reg></choice> es nicht laßen <choice><orig>ge &#x017F;chehen</orig><reg resp="#MP">ge&#x017F;chehen</reg></choice><lb/>
+                    <note rendition="#color(#123456)" resp="#H24" place="mBottom"><del rendition="#s"><hi rendition="#aq">P</hi> 24</del> <hi rendition="#aq"><abbr>A.</abbr> <choice><abbr>Sup.</abbr><expan resp="#MP">Superintendent</expan></choice></hi> <choice><abbr>betr.</abbr><expan resp="#MP">betreffend</expan></choice></note><lb/>
+                    <pb facs="PK15_56_0002.tif" n="56v"/>
+                    dann auf &#x017F;olche weiße hätten die andere<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    herren in gei&#x017F;tlichen dingen mehr<lb/>
+                    in unßeren lande Zu &#x017F;agen und <subst><del rendition="#ow">der</del><add place="across">wi</add></subst>der<lb/>
+                    unßeren willen Zu <choice><orig>ver ordnen</orig><reg resp="#MP">verordnen</reg></choice> al&#x017F; wir<lb/>
+                    &#x017F;elb&#x017F;t der teifel i&#x017F;t recht loß <quote>l<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>&#x017F;t &#x017F;ie toben<lb/>
+                        <add place="left">witte<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><note type="editorial" resp="#MP">Meint: spotten.</note> </add><subst><del rendition="#ow"><unclear reason="illegible" cert="high" resp="#MP">la&#x017F;t &#x017F;ie</unclear></del><add place="across">lachen</add></subst>, <del rendition="#s">witten</del> gott u<subst><del rendition="#ow"><gap reason="illegible" unit="words" quantity="1"/></del><add place="across">n&#x017F;er</add></subst> heil wird in eil<lb/>
+                        &#x017F;ie Zu &#x017F;chanden machen, <choice><orig>ohn ver Zagt</orig><reg resp="#MP">ohnverZagt</reg></choice> und ohne<lb/>
+                        grauen &#x017F;oll ein chri&#x017F;t wo er i&#x017F;t &#x017F;tetz &#x017F;ich<lb/>
+                        l<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ßen &#x017F;chauen</quote>,<note type="editorial" resp="#MP">Die Schreiberin zitiert hier aus dem Lied &quot;Warum sollt' ich mich denn grämen&quot; (Text: Paul Gerhardt 1653; Melodie: Johann Georg Ebeling 1666).</note> es muß ia er&#x017F;t recht fin&#x017F;ter<lb/>
+                    <note place="left" type="postscript" rendition="#v"><label><hi rendition="#aq">ps</hi></label><lb/>
+                        die <name type="person" corresp="#marie_eleonore_koestritz" resp="#MP">lorel</name> kiße ich herzlich</note>werden ehe es lichte wird, gott wird<lb/>
+                    ihnen &#x017F;chon endlich ein <choice><orig>ge biß</orig><reg resp="#MP">gebiß</reg></choice> inß maul<lb/>
+                    legen,</p><lb/>
+                <p><choice><abbr>Erld&#x2113;</abbr><expan resp="#MP">Erlaucht</expan></choice> haben <choice><orig>ver gangen</orig><reg resp="#MP">vergangen</reg></choice> mir <choice><orig>ge &#x017F;chriben</orig><reg resp="#MP">ge&#x017F;chriben</reg></choice> wie<lb/>
+                    es doch köm&#x0305;e d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß wir ietzt he&#x00FF;<note type="editorial" resp="#MP">Meint: Heu.</note> kauffe<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    mi&#x017F;ten, und <choice><orig>vor hero</orig><reg resp="#MP">vorhero</reg></choice> be&#x00FF; meinem&#x0305; &#x017F;elige<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    <rs type="person" ref="http://d-nb.info/gnd/104138483" corresp="#heinrichx_ebersdorf" resp="#MP">herren</rs> <choice><orig>auß kom&#x0305;en</orig><reg resp="#MP">außkom&#x0305;en</reg></choice> wören, &#x017F;o i&#x017F;t diß wohl<lb/>
+                    die <choice><orig>ur &#x017F;ach</orig><reg resp="#MP">ur&#x017F;ach</reg></choice>, d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß wir er&#x017F;tlich denn <rs type="person" corresp="#unterlemnitzer_schaefer" resp="#MP">&#x017F;cheffer</rs><lb/>
+                    Zu <name type="place" ref="http://www.geonames.org/2819162/unterlemnitz.html" corresp="#unterlemnitz" resp="#MP"><choice><orig>under lem&#x0305;nitz</orig><reg resp="#MP">underlem&#x0305;nitz</reg></choice></name> einen garden <choice><orig>ver bachtet</orig><reg resp="#MP">verbachtet</reg></choice><lb/>
+                    da wir ietzt mehr vor <choice><orig>be kom&#x0305;en</orig><reg resp="#MP">bekom&#x0305;en</reg></choice> al&#x017F;<lb/>
+                    wir ihm&#x0305; &#x017F;elb&#x017F;t <choice><orig>ge nutzet</orig><reg resp="#MP">genutzet</reg></choice> Zwe&#x00FF;dens &#x017F;o<lb/>
+                    &#x017F;ind 2 iahr <choice><orig>nach einander</orig><reg resp="#MP">nacheinander</reg></choice> <choice><orig>miß wackß&#x02F7;</orig><reg resp="#MP">mißwackßen</reg></choice><lb/>
+                    iahre <choice><orig>ge we&#x017F;t</orig><reg resp="#MP">gewe&#x017F;t</reg></choice> <date when-iso="1716">vor dem&#x0305; iahr</date> und <date when-iso="1717">diß<lb/>
+                        iahr</date>, und weil der mangel <choice><orig>ein mahl</orig><reg resp="#MP">einmahl</reg></choice><lb/>
+                    <pb facs="PK15_56_0003.tif" n="57r"/>
+                    <fw type="folNum" place="top">57</fw>
+                    <choice><orig>ein ge rißen</orig><reg resp="#MP">eingerißen</reg></choice> i&#x017F;t, &#x017F;o haben &#x017F;ie im&#x0305; <choice><orig>frih</orig><reg resp="#MP">frih-</reg></choice><lb/>
+                    iahr <subst><del rendition="#ow"><gap reason="illegible" unit="words" quantity="1"/></del><add place="across">für</add></subst> d<subst><del rendition="#ow">enn</del><add place="across">ie</add></subst> ockßen die wißen <choice><orig>ab</orig><reg resp="#MP">ab-</reg></choice><lb/>
+                    <choice><orig>ge gr<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>&#x017F;t</orig><reg resp="#MP">gegra&#x017F;t</reg></choice> wo kann <choice><orig>her nach</orig><reg resp="#MP">hernach</reg></choice> da <choice><orig>ohne</orig><reg resp="#MP">ohne-</reg></choice><lb/>
+                    dem&#x0305;, <del rendition="#s">viel</del> wenig worden daß he&#x00FF; <choice><orig>her</orig><reg resp="#MP">her-</reg></choice><lb/>
+                    kom&#x0305;en, wenn <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> <choice><orig>hir her kom&#x0305;en</orig><reg resp="#MP">hirherkom&#x0305;en</reg></choice><lb/>
+                    wollen wir mit unßeren wirt&#x017F;chafter<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice><lb/>
+                    <choice><orig>da von</orig><reg resp="#MP">davon</reg></choice> reden, die <del rendition="#s">die ock<unclear reason="illegible" cert="high" resp="#MP">&#x017F;</unclear></del> mit denn <choice><orig>Zuch</orig><reg resp="#MP">Zuch-</reg></choice><lb/>
+                    ockßen<index indexName="TIERE"><term>Zugochse</term></index> wird hir eine große menge<lb/>
+                    he&#x00FF; <choice><orig>ver füttert</orig><reg resp="#MP">verfüttert</reg></choice> d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß macht, weil &#x017F;ie<lb/>
+                    keine hut <choice><orig>&#x017F;om&#x0305;ers Zeit</orig><reg resp="#MP">&#x017F;om&#x0305;ersZeit</reg></choice> haben mindl<supplied reason="damage" cert="high" resp="#MP">ich</supplied><lb/>
+                    von allen mehr, wann <choice><abbr>Er<subst><del rendition="#ow">dt</del><add place="across">l</add></subst>dt</abbr><expan resp="#MP">Erlaucht</expan></choice> <choice><orig>her k<supplied reason="damage" cert="high" resp="#MP">om&#x0305;en</supplied></orig><reg resp="#MP">herkom&#x0305;en</reg></choice><lb/>
+                    d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß <rs type="place" ref="http://www.geonames.org/11049046/upper-castle-greiz.html" corresp="#obergreiz" resp="#MP"><choice><orig>ober greitzer</orig><reg resp="#MP">obergreitzer</reg></choice></rs> &#x017F;chreiben i&#x017F;t<add rendition="#v" place="left"><metamark function="insert" rend="&#x02E3;"/> nach <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> <choice><orig>be fehl</orig><reg resp="#MP">befehl</reg></choice></add> u<gap reason="lost" unit="words" quantity="1"/><lb/>
+                    <choice><orig>ge goßen</orig><reg resp="#MP">gegoßen</reg></choice> <choice><abbr>Er<subst><del rendition="#ow">dt</del><add place="across">l</add></subst>dt</abbr><expan resp="#MP">Erlaucht</expan></choice> könen es nuhn mit den<lb/>
+                    anderen vetter &#x017F;chon Zum&#x0305; &#x017F;tande bring<choice><orig>&#x02F7;</orig><reg resp="#MP">en</reg></choice><lb/>
+                    d<choice><unclear reason="illegible" cert="high" resp="#MP">a</unclear><unclear reason="illegible" cert="low" resp="#MP">o</unclear></choice>ß <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> meinem&#x0305; <rs type="person" ref="http://d-nb.info/gnd/104254335" corresp="#heinrichxxix_ebersdorf" resp="#MP">&#x017F;ohn</rs> welcher <date when-iso="1717-10-07">ge&#x017F;ter<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice></date><lb/>
+                    abend glicklich hir <choice><orig>an kom&#x0305;en</orig><reg resp="#MP">ankom&#x0305;en</reg></choice> die pferde<lb/>
+                    <choice><orig>ge lihen</orig><reg resp="#MP">gelihen</reg></choice> danck ich din&#x017F;tlich, mein <choice><orig>un ge</orig><reg resp="#MP">unge-</reg></choice><lb/>
+                    &#x017F;chwungner <rs type="person" corresp="#ebersdorfer_kutscher" resp="#MP">kut&#x017F;cher</rs> aber <del rendition="#s">hatt</del> i&#x017F;t weider<lb/>
+                    <choice><orig>ge ritten</orig><reg resp="#MP">geritten</reg></choice> al&#x017F; ihm&#x0305; <choice><orig>be fohlen</orig><reg resp="#MP">befohlen</reg></choice> <choice><orig>ge we&#x017F;t</orig><reg resp="#MP">gewe&#x017F;t</reg></choice> welches<lb/>
+                    <choice><abbr>Erldt</abbr><expan resp="#MP">Erlaucht</expan></choice> <subst><del rendition="#ow">m</del><add place="across">n</add></subst>icht <choice><orig>un gnädig</orig><reg resp="#MP">ungnädig</reg></choice> nehm&#x0305;en wolle<choice><orig>&#x02F7;</orig><reg resp="#MP">n</reg></choice></p><lb/>
+                <closer><salute>ich bleibe meines liben 24&#x017F;ten vetters<lb/>
+                    <hi rendition="#right">treüe</hi></salute> <signed rendition="#right"><choice><orig>Erd <sic>muhte</sic></orig><reg resp="#MP"><name type="person" ref="http://d-nb.info/gnd/139081127" corresp="#erdmuthe_benigna_ebersdorf" resp="#MP">Erdmuhte</name></reg></choice></signed></closer>
+            </div><lb/>
+            <pb facs="PK15_56_0004.tif" n="57v"/>
+            <div type="envelope">
+                <figure type="seal"/>
+                <p><milestone unit="handShift" resp="#unknownScribe"/>
+                    <address rendition="#aq" xml:lang="lat">
+                        <addrLine>
+                            <hi rendition="#et">A Monsieur</hi><lb/>
+                            Monsieur le Comte<lb/>
+                            <name type="person" ref="http://d-nb.info/gnd/130132365" corresp="#heinrichxxiv_koestritz" resp="#MP">Henry XXIV. Reu&#x017F;s</name>,<lb/>
+                            Comte et Seigneur de<lb/>
+                            <name type="place" ref="http://www.geonames.org/2853292/plauen.html" corresp="#plauen" resp="#MP">Plaue</name> <choice><abbr>p</abbr><expan resp="#MP">perge</expan></choice><note type="editorial" resp="#MP">Perge: und so weiter.</note></addrLine><lb/>
+                        <addrLine><hi rendition="#c">&#x00E0;</hi><lb/>
+                            <hi rendition="#right"><name type="place" ref="http://www.geonames.org/6549747/gera.html" corresp="#gera" resp="#MP">Gera</name>.</hi>
+                        </addrLine>
+                    </address>
+                </p><lb/>
+            </div>
         </body>
     </text>
 </TEI>
