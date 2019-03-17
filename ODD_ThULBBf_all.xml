@@ -33,7 +33,7 @@
             <schemaSpec ident="basisformat" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
                 <!-- required modules -->
                 <moduleRef key="core"
-                    include="abbr add addrLine address author bibl biblScope cb choice cit corr date del desc expan foreign gap head hi index item l label lb lg list listBibl measure milestone name note orig p pb pubPlace publisher q quote ref reg resp respStmt rs sic sp speaker stage term title unclear"/>
+                    include="abbr add addrLine address author bibl biblScope cb choice cit corr date del desc editor expan foreign gap head hi index item l label lb lg list listBibl measure milestone name note orig p pb pubPlace publisher q quote ref reg resp respStmt rs sic sp speaker stage term title unclear"/>
                 <moduleRef key="tei"/>
                 <moduleRef key="header"
                     include="availability biblFull change classCode classDecl correction correspAction correspContext correspDesc edition editionStmt editorialDecl encodingDesc extent fileDesc handNote idno keywords langUsage language licence normalization notesStmt profileDesc publicationStmt punctuation rendition revisionDesc scriptNote seriesStmt sourceDesc tagsDecl taxonomy teiHeader textClass titleStmt"/>
@@ -234,9 +234,9 @@
                                 <valItem ident="#mMM">
                                     <desc>Anstreichung am Rand</desc>
                                 </valItem>
-                                <valItem ident="#color(#123456)">
+                                <!--<valItem ident="#color(123456)">
                                     <desc>Farbiger Text oder Markierung</desc>
-                                </valItem>
+                                </valItem>-->
                                 <!-- mit Schematron definieren, dass lediglich 6-stelliger Hexadezimalcode erscheinen darf -->
                             </valList>
                         </attDef>
@@ -672,7 +672,7 @@
                                     <desc>Korrektur aus dem Verzeichnis der Corrigenda &#xFC;bernommen</desc>
                                 </valItem>-->
                                 <valItem ident="editorial">
-                                    <desc>Korrektur durch den Editor</desc>
+                                    <desc>Korrektur durch den Editor; Wenn das Element leer ist, handelt es sich um eine Streichung durch den Editor.</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -1618,6 +1618,9 @@
                                 <valItem ident="remarkSource">
                                     <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
                                 </valItem>
+                                <valItem ident="remarkSourceEdition">
+                                    <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
+                                </valItem>
                                 <valItem ident="remarkDocument">
                                     <desc>nur in &lt;teiHeader&gt; zu verwenden</desc>
                                 </valItem>
@@ -1649,125 +1652,145 @@
                                     <desc>Angabe einer alternativen Datierung</desc>
                                 </valItem>
                                 <valItem ident="postscript"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Angabe einer alternativen Datierung</desc>
+                                    <desc>Angabe eines Postskripts, das nicht auf die Unterschrift folgt</desc>
                                 </valItem>
-                                <valItem ident="DealingWithHistoricalSpelling"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Historischer Schreibweise</desc>
+                                <valItem ident="sourceContext"><!-- hinzugefügt -->
+                                    <desc>Angabe von Quellen, die der edierten Quelle vorausgingen oder ihr nachfolgten,z.B. nachfolgender Brief</desc>
                                 </valItem>
-                                <valItem ident="postscript"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Angabe einer alternativen Datierung</desc>
+                                <valItem ident="conjectures"><!-- hinzugefügt -->
+                                    <desc>Umfang mit stilistischen und inhaltlichen Änderungen und Ergänzungen der Edierenden</desc>
                                 </valItem>
-                                
-                                <valItem ident="DealingWithMisspelling"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Schreibfehlern</desc>
+                                <valItem ident="spelling"><!-- hinzugefügt -->
+                                    <desc>Umgang mit der (Recht)Schreibung der Vorlage</desc>
                                 </valItem>
-                                <valItem ident="DealingWithAbbreviations"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Abkürzungen</desc>
+                                <valItem ident="punctuation"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Interpunktion der Vorlage</desc>
                                 </valItem>
-                                <valItem ident="DealingWithPunctuation"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Interpunktion</desc>
+                                <valItem ident="caseSensitivity"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Groß-/Kleinschreibung der Vorlage</desc>
                                 </valItem>
-                                <valItem ident="DealingWithCaseSensitivity"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Groß-/Kleinschreibung</desc>
+                                <valItem ident="separateAndCompoundSpelling"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Getrennt- und Zusammenschreibung der Vorlage</desc>
                                 </valItem>
-                                <valItem ident="DealingWithSeparateAndCompoundSpelling"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Getrennt- und Zusammenschreibung</desc>
+                                <valItem ident="hyphenation"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Silbentrennung der Vorlage</desc>
                                 </valItem>
-                                <valItem ident="DealingWithHighlightings"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="misspelling"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Schreibfehlern der Vorlage</desc>
+                                </valItem>
+                                <valItem ident="commonAbbreviations"><!-- hinzugefügt -->
+                                    <desc>Umgang mit allgemein verständlichen Abkürzungen und Siglen</desc>
+                                </valItem>
+                                <valItem ident="rareAbbreviations"><!-- hinzugefügt -->
+                                    <desc>Umgang mit allgemein nicht verständlichen Abkürzungen und Siglen</desc>
+                                </valItem>
+                                <valItem ident="abbreviationOverline"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Kürzungsoberstrich</desc>
+                                </valItem>
+                                <valItem ident="marginalia"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Marginalien</desc>
+                                </valItem>
+                                <valItem ident="diacritics"><!-- hinzugefügt -->
+                                    <desc>Umgang mit diakritischen Zeichen</desc>
+                                </valItem>
+                                <valItem ident="highlightings"><!-- hinzugefügt -->
                                     <desc>Umgang mit Hervorhebungen</desc>
                                 </valItem>
-                                <valItem ident="DealingWithLinebreaks"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="lineBreaks"><!-- hinzugefügt -->
                                     <desc>Umgang mit Zeilenwechsel</desc>
                                 </valItem>
-                                <valItem ident="DealingWithPagebreaks"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Seitenwechsel</desc>
+                                <valItem ident="consonantAccumulation"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Konsonantendoppelung</desc>
                                 </valItem>
-                                <valItem ident="DealingWithHyphenation"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Silbentrennung</desc>
+                                <valItem ident="whitespace"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Leerzeichen und Leerräumen</desc>
                                 </valItem>
-                                <valItem ident="DealingWithConsonantAccumulation"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Konsonantendopplung</desc>
+                                <valItem ident="contemporaryCorrections"><!-- hinzugefügt -->
+                                    <desc>Umfang mit zeitgenössischen Korrekturen</desc>
                                 </valItem>
-                                <valItem ident="DealingWithWhitespaces"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Leerzeichen</desc>
+                                <valItem ident="contemporaryAdditions"><!-- hinzugefügt -->
+                                    <desc>Umgang mit zeitgenössischen Hinzufügungen</desc>
                                 </valItem>
-                                <valItem ident="DealingWithTextGenesis"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit textgenetischen Informationen</desc>
-                                </valItem>
-                                <valItem ident="DealingWithTextLoss"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="textLoss"><!-- hinzugefügt -->
                                     <desc>Umgang mit Textverlust</desc>
                                 </valItem>
-                                <valItem ident="DealingWithLongS"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="longS"><!-- hinzugefügt -->
                                     <desc>Umgang mit lang-s</desc>
                                 </valItem>
-                                <valItem ident="DealingWithStylisticCorrections"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit sytlistischen Korrekturen</desc>
+                                <valItem ident="roundR"><!-- hinzugefügt -->
+                                    <desc>Umgang mit rund-r</desc>
                                 </valItem>
-                                <valItem ident="DealingWithSuppliedText"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit ergänztem Text</desc>
-                                </valItem>
-                                <valItem ident="DealingWithPositioning"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit topographischem Textbefund</desc>
-                                </valItem>
-                                <valItem ident="DealingWithPaperSheetSignature"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Blattsignaturen</desc>
-                                </valItem>
-                                <valItem ident="DealingWithAbbreviationOverline"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit Abbreviations-/Kürzungstrich</desc>
-                                </valItem>
-                                <valItem ident="DealingWithCharactersIAndJ"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="charactersIAndJ"><!-- hinzugefügt -->
                                     <desc>Umgang mit den Buchstaben i und j</desc>
                                 </valItem>
-                                <valItem ident="DealingWithCharactersUAndV"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit den Buchstaben u und v</desc>
+                                <valItem ident="charactersUUuUvAndVW"><!-- hinzugefügt -->
+                                    <desc>Umgang mit den Buchstaben u/uu/uv und v/w</desc>
                                 </valItem>
-                                <valItem ident="DealingWithCharactersCAndT"><!-- VORLÄUFIG!!! hinzugefügt -->
+                                <valItem ident="charactersCAndT"><!-- hinzugefügt -->
                                     <desc>Umgang mit den Buchstaben c und t</desc>
                                 </valItem>
-                                <valItem ident="DealingWithCharactersSZAndß"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Umgang mit den Buchstaben s und ß</desc>
+                                <valItem ident="charactersYAndIJ"><!-- hinzugefügt -->
+                                    <desc>Umgang mit den Buchstaben y und i/j</desc>
                                 </valItem>
-                                <valItem ident="misspelling"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Schreibfehler</desc>
+                                <valItem ident="charactersSzAndß"><!-- hinzugefügt -->
+                                    <desc>Umgang mit den Buchstaben sz und ß</desc>
                                 </valItem>
-                                <valItem ident="abbreviations"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Abkürzungen</desc>
+                                <valItem ident="numeralCharacters"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Zahlzeichen</desc>
                                 </valItem>
-                                <valItem ident="contentErrors"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Inhaltliche Fehler</desc>
+                                <valItem ident="consonanticLigatures"><!-- hinzugefügt -->
+                                    <desc>Umgang mit konsonantischen Ligtauren</desc>
                                 </valItem>
-                                <valItem ident="persons"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Personen</desc>
+                                <valItem ident="vocalicLigatures"><!-- hinzugefügt -->
+                                    <desc>Umgang mit vokalischen Ligaturen</desc>
                                 </valItem>
-                                <valItem ident="geographicalTerms"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Geographica</desc>
+                                <valItem ident="foliation"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Blatt- bzw. Seitenzählung</desc>
                                 </valItem>
-                                <valItem ident="organisations"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Organisationen/Institutionen</desc>
+                                <valItem ident="positioning"><!-- hinzugefügt -->
+                                    <desc>Umgang mit räumlicher Anordnung des Textes</desc>
                                 </valItem>
-                                <valItem ident="bibliographicalData"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Bibliographische Angaben</desc>
+                                <valItem ident="UnclearReadings"><!-- hinzugefügt -->
+                                    <desc>Umgang mit unsicherer Lesung</desc>
                                 </valItem>
-                                <valItem ident="datings"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Datierungen</desc>
+                                <valItem ident="persons"><!-- hinzugefügt -->
+                                    <desc>Umgang mit genannten Personen</desc>
                                 </valItem>
-                                <valItem ident="foreignTerms"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>fremdsprachliche Textstellen</desc>
+                                <valItem ident="geographicalTerms"><!-- hinzugefügt -->
+                                    <desc>Umgang mit geographischen Nennungen</desc>
                                 </valItem>
-                                <valItem ident="UnknowUnusedAndRegionalTermsAndIdioms"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Unbekannte, heute ungebräuchliche oder regionale Begriffe und Idiome</desc>
+                                <valItem ident="organisationsInstitutionsCorporations"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Nennungen von Institutionen, Organisationen oder Körperschaften</desc>
                                 </valItem>
-                                <valItem ident="factsAndEvents"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Ereignisse</desc>
+                                <valItem ident="events"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Nennung von Ereignissen</desc>
                                 </valItem>
-                                <valItem ident="editorialResponsibilities"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Editorische Zuständigkeiten/Verantwortlichkeiten</desc>
+                                <valItem ident="bibliographics"><!-- hinzugefügt -->
+                                    <desc>Umgang mit bibliographischen Nennungen</desc>
                                 </valItem>
-                                <valItem ident="directQuotations"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Zitate (direkte)</desc>
+                                <valItem ident="artificialWork"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Nennung von Artefakten (z.B. Architektur, Gemälde etc.)</desc>
                                 </valItem>
-                                <valItem ident="indirectQuotations"><!-- VORLÄUFIG!!! hinzugefügt -->
-                                    <desc>Zitate (indirekte)</desc>
+                                <valItem ident="quotations"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Zitaten</desc>
+                                </valItem>
+                                <valItem ident="datings"><!-- hinzugefügt -->
+                                    <desc>Umgang mit Datierungen</desc>
+                                </valItem>
+                                <valItem ident="foreignMaterial"><!-- hinzugefügt -->
+                                    <desc>Umgang mit fremdsprachlichen Textpassagen</desc>
+                                </valItem>
+                                <valItem ident="archaicAndLocalTermsAndIdioms"><!-- hinzugefügt -->
+                                    <desc>Umgang mit nicht mehr gebräuchliche oder regionalen Begriffen oder Idiomen</desc>
+                                </valItem>
+                                <valItem ident="editorialResponsibilities"><!-- hinzugefügt -->
+                                    <desc>Umgang mit editorischen Zuständigkeiten oder Verantwortlichkeiten</desc>
+                                </valItem>
+                                <valItem ident="editorialContentRemarks"><!-- hinzugefügt -->
+                                    <desc>Umgang mit editorischen Sacherläuterungen</desc>
+                                </valItem>
+                                <valItem ident="textCriticalRemarks"><!-- hinzugefügt -->
+                                    <desc>Umgang mit textkritischem Stellenkommentar</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -2745,6 +2768,9 @@
                                 <valItem ident="part"><!--hinzugefügt-->
                                     <desc>Angabe der Verortung des Dokuments innerhalb des UrMEL-Repository</desc>
                                 </valItem>
+                                <valItem ident="sourceEdition"><!--hinzugefügt-->
+                                    <desc>Angaben zur übergeordneten Quellenedition</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="sameAs" mode="delete"/>
@@ -3305,21 +3331,21 @@
                         <attDef ident="resp" mode="delete"/>
                     </attList>
                 </elementSpec>
-                <!--<elementSpec ident="editor" module="core" mode="change">
+                <elementSpec ident="editor" module="core" mode="change">
                     <attList>
                         <attDef ident="corresp" mode="change" usage="opt">
                             <datatype minOccurs="1" maxOccurs="1">
                                 <rng:ref name="teidata.pointer"/>
                             </datatype>
-                            <!-\-<valList type="closed" mode="replace">
+                            <!--<valList type="closed" mode="replace">
                                 <valItem ident="#DTACorpusPublisher"/>
-                            </valList>-\->
+                            </valList>-->
                         </attDef>
-                        <attDef ident="role" mode="change" usage="opt">
+                        <!--<attDef ident="role" mode="change" usage="opt">
                             <valList type="closed" mode="replace">
                                 <valItem ident="translator"/>
                             </valList>
-                        </attDef>
+                        </attDef>-->
                         <attDef ident="facs" mode="delete"/>
                         <attDef ident="n" mode="delete"/>
                         <attDef ident="next" mode="delete"/>
@@ -3333,7 +3359,7 @@
                         <attDef ident="cert" mode="delete"/>
                         <attDef ident="resp" mode="delete"/>
                     </attList>
-                </elementSpec>-->
+                </elementSpec>
                 <elementSpec ident="editorialDecl" module="header" mode="change">
                     <attList>
                         <attDef ident="xml:id" mode="delete"/>
@@ -3699,6 +3725,7 @@
                                 <valItem ident="URN"/>
                                 <!--<valItem ident="EPN"/>-->
                                 <valItem ident="URLCatalogue"/>
+                                <valItem ident="URIKalliope"/>
                                 <valItem ident="URLImages"/>
                                 <valItem ident="URLWeb"/>
                                 <valItem ident="URLXML"/>
@@ -5325,6 +5352,7 @@
                                 <valItem ident="engrossedCopy"/>
                                 <valItem ident="concept"/>
                                 <valItem ident="copy"/>
+                                <valItem ident="print"/>
                             </valList>
                         </attDef>
                         <attDef ident="rendition" mode="delete"/>
