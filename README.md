@@ -1,5 +1,5 @@
 # Editionsportal-Thueringen
-http://www.histinst.uni-jena.de/Bereiche/Geschlechtergeschichte/Projekte/Editionsportal+Th%C3%BCringen.html
+https://www.gw.uni-jena.de/editionenportal
 
 The ThULB base format (ThULBBf) is an extension of the base format of the Deutsches Textarchiv (DTABf: http://www.deutschestextarchiv.de/doku/basisformat/) for handwritten historical sources.
 
